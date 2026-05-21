@@ -1,9 +1,9 @@
 {
-  "name": "filemaker-vscode",
-  "displayName": "FileMaker VSCode",
+  "name": "filemaker-vscode-updated",
+  "displayName": "FileMaker VSCode (Updated)",
   "description": "FileMaker syntax highlighting, snippets, and functions \u2014 updated through FileMaker 2025 (v22)",
   "version": "2.0.0",
-  "publisher": "jwillinghalpern",
+  "publisher": "alitfal",
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jwillinghalpern/filemaker-vscode-bundle"
+    "url": "https://github.com/alitfal/filemaker-vscode"
   },
   "icon": "resources/filemaker-vscode-128.png",
   "engines": {
@@ -94,5 +94,9 @@
     "calc",
     "snippets",
     "syntax"
-  ]
+  ],
+  "bugs": {
+    "url": "https://github.com/alitfal/filemaker-vscode/issues"
+  },
+  "homepage": "https://github.com/alitfal/filemaker-vscode"
 }
