@@ -1,7 +1,7 @@
 # FileMaker VSCode
 
-> Syntax highlighting, autocompletado y snippets para cálculos y scripts de **FileMaker / Claris Pro** en Visual Studio Code.
-> Actualizado hasta **FileMaker 2025 (v22)** — cobertura completa de funciones, script steps, Get() params e IA.
+> Syntax highlighting, autocompletion, and snippets for **FileMaker / Claris Pro** calculations and scripts in Visual Studio Code.
+> Full coverage through **FileMaker 2025 (v22)** — functions, script steps, Get() params, and AI.
 
 [![Version](https://img.shields.io/visual-studio-marketplace/v/alitfal.filemaker-vscode-updated?label=version)](https://marketplace.visualstudio.com/items?itemName=alitfal.filemaker-vscode-updated)
 [![Installs](https://img.shields.io/visual-studio-marketplace/i/alitfal.filemaker-vscode-updated)](https://marketplace.visualstudio.com/items?itemName=alitfal.filemaker-vscode-updated)
@@ -13,59 +13,59 @@
 
 ---
 
-## ✨ Características
+## ✨ Features
 
-### 🎨 Syntax Highlighting por categorías
-Colores diferenciados para cada tipo de elemento:
+### 🎨 Category-based Syntax Highlighting
+Different colors for each type of element:
 
-| Elemento | Color |
-|----------|-------|
-| Funciones builtin | 🟣 Lila |
-| Funciones AI / Embeddings / RAG | 🩷 Rosa bold |
-| Funciones JSON | 🔵 Cian bold |
-| Funciones criptografía | 🟠 Naranja bold |
-| Funciones fecha / hora | 🟢 Verde |
-| Funciones aggregate | 🟡 Amarillo bold |
-| Variables locales `$var` | 🟡 Amarillo |
-| Variables globales `$$var` | 🟠 Naranja bold |
-| Control de flujo `If` / `Else If` / `End If` / `Loop` / `End Loop` | 🩷 Rosa bold |
-| Script steps | 🔵 Cian |
-| Strings | 🟡 Amarillo |
-| Comentarios `#` y `//` | ⚫ Gris itálica |
+| Element | Color |
+|---------|-------|
+| Built-in functions | 🟣 Purple |
+| AI / Embeddings / RAG functions | 🩷 Pink bold |
+| JSON functions | 🔵 Cyan bold |
+| Cryptography functions | 🟠 Orange bold |
+| Date / Time functions | 🟢 Green |
+| Aggregate functions | 🟡 Yellow bold |
+| Local variables `$var` | 🟡 Yellow |
+| Global variables `$$var` | 🟠 Orange bold |
+| Control flow `If` / `Else If` / `End If` / `Loop` / `End Loop` | 🩷 Pink bold |
+| Script steps | 🔵 Cyan |
+| Strings | 🟡 Yellow |
+| Comments `#` and `//` | ⚫ Grey italic |
 
 ### 📦 356+ Snippets
-Autocompletado para todas las funciones integradas de FileMaker hasta la versión 2025, con tab stops nombrados para navegar entre parámetros.
+Autocomplete for every built-in FileMaker function through version 2025, with named tab stops to navigate between parameters.
 
-Snippets de productividad incluidos:
+Productivity snippets included:
 
-| Prefijo | Expansión |
-|---------|-----------|
-| `sqls` | ExecuteSQL con plantilla SELECT |
-| `letm` | Let con múltiples variables |
-| `ifi` | If inline |
-| `whilet` | While con los 4 parámetros |
-| `casei` | Case inline |
-| `JSONSetElement multi` | JSONSetElement con múltiples pares |
-| `JSONGetElement nested` | JSONGetElement con dot-notation |
-| `Substitute list` | Substitute con múltiples pares |
+| Prefix | Expands to |
+|--------|-----------|
+| `sqls` | ExecuteSQL with SELECT template |
+| `letm` | Let with multiple variables |
+| `ifi` | Inline If |
+| `whilet` | While with all 4 parameters |
+| `casei` | Inline Case with one condition and else |
+| `JSONSetElement multi` | JSONSetElement with multiple key-value pairs |
+| `JSONGetElement nested` | JSONGetElement with dot-notation path |
+| `Substitute list` | Substitute with multiple find/replace pairs |
 
-### 🔧 JSON → JSONSetElement()
-Selecciona cualquier JSON y ejecuta **FileMaker: JSON to JSONSetElement()** desde el Command Palette (`Cmd+Shift+P`) para convertirlo instantáneamente a una expresión FileMaker.
+### 🔧 JSON → JSONSetElement() Converter
+Select any JSON text and run **FileMaker: JSON to JSONSetElement()** from the Command Palette (`Cmd+Shift+P`) to instantly convert it to a FileMaker expression.
 
 ---
 
-## 📥 Instalación
+## 📥 Installation
 
-**Desde el Marketplace** — busca `FileMaker VSCode` en la pestaña Extensions de VS Code e instala.
+**From the Marketplace** — search `FileMaker VSCode` in the VS Code Extensions tab and click Install.
 
-**Manual** — descarga el `.vsix` desde [Releases](https://github.com/alitfal/filemaker-vscode/releases) y ejecuta:
+**Manual** — download the `.vsix` from [Releases](https://github.com/alitfal/filemaker-vscode/releases) and run:
 code --install-extension filemaker-vscode-updated-x.x.x.vsix
 
 ---
 
-## 🎨 Configurar colores (Dracula Pro)
+## 🎨 Color Setup (Dracula Pro)
 
-Para obtener los colores que se ven en la captura, añade esto a tu `settings.json` de VS Code (`Cmd+Shift+P` → `Open User Settings JSON`):
+To get the colors shown in the screenshot, add the following to your VS Code `settings.json` (`Cmd+Shift+P` → `Open User Settings JSON`):
 
 ```json
 "editor.tokenColorCustomizations": {
@@ -94,26 +94,26 @@ Para obtener los colores que se ven en la captura, añade esto a tu `settings.js
 
 ---
 
-## 📁 Extensiones de archivo soportadas
+## 📁 Supported File Extensions
 
-| Extensión | Uso |
+| Extension | Use |
 |-----------|-----|
-| `.fmfn` | Custom function |
-| `.fmcalc` | Cálculo FileMaker |
+| `.fmfn` | FileMaker custom function |
+| `.fmcalc` | FileMaker calculation |
 | `.fmscript` | Script step calculation |
-| `.calc` | Cálculo genérico |
+| `.calc` | Generic calculation file |
 
-Para archivos `.txt` o cualquier otro formato, selecciona el lenguaje manualmente en la barra inferior de VS Code → `Plain Text` → `FileMaker`.
+For `.txt` or other file types, manually select the language in the VS Code status bar → `Plain Text` → `FileMaker`.
 
 ---
 
-## 🆕 Cobertura completa FM 2025
+## 🆕 Complete FM 2025 Coverage
 
-### Funciones de cálculo (225+)
-Todas las funciones oficiales organizadas por categoría:
+### Calculation Functions (225+)
+All official functions organized by category:
 
-| Categoría | Ejemplos |
-|-----------|---------|
+| Category | Examples |
+|----------|---------|
 | Text | `Substitute`, `FilterValues`, `UniqueValues`, `GetTextFromPDF`... |
 | Number | `Abs`, `Round`, `SetPrecision`... |
 | Date / Time | `Date`, `Timestamp`, `WeekOfYear`... |
@@ -124,13 +124,13 @@ Todas las funciones oficiales organizadas por categoría:
 | Crypto | `CryptGeneratePassKey`, `CryptGenerateSignature`... |
 | Aggregate | `Sum`, `Average`, `Count`, `StDev`... |
 | Design | `FieldNames`, `TableNames`, `ScriptNames`... |
-| Get | 136 parámetros — lista completa FM 2025 |
+| Get | 136 parameters — complete FM 2025 list |
 
-### Script steps (200+)
-Todas las categorías oficiales en inglés:
+### Script Steps (200+)
+All official categories in English:
 
-| Categoría | Ejemplos |
-|-----------|---------|
+| Category | Examples |
+|----------|---------|
 | Control | `If`, `Else If`, `End If`, `Loop`, `Exit Loop If`, `Perform Script`... |
 | Navigation | `Go to Layout`, `Go to Record`, `Go to Portal Row`... |
 | Editing | `Cut`, `Copy`, `Paste`, `Select All`... |
@@ -145,13 +145,13 @@ Todas las categorías oficiales en inglés:
 
 ---
 
-## 🤝 Contribuir
+## 🤝 Contributing
 
-Pull requests bienvenidos. Ver [CONTRIBUTING.md](CONTRIBUTING.md) para instrucciones detalladas.
+Pull requests are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for full details.
 
 ---
 
-## 📄 Créditos
+## 📄 Credits
 
-Sintaxis original de [Donovan Chandler](https://github.com/DonovanChan/Filemaker.tmbundle).
-Fork original de [jwillinghalpern](https://github.com/jwillinghalpern/filemaker-vscode-bundle).
+Original syntax ported from [Donovan Chandler's TextMate bundle](https://github.com/DonovanChan/Filemaker.tmbundle).
+Originally forked from [jwillinghalpern/filemaker-vscode-bundle](https://github.com/jwillinghalpern/filemaker-vscode-bundle).
