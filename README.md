@@ -1,66 +1,55 @@
 # FileMaker VSCode
 
-Filemaker syntax and snippets for Visual Studio Code.
-<https://github.com/jwillinghalpern/filemaker-vscode-bundle>
+Syntax highlighting, autocompleción y snippets para cálculos FileMaker/Claris en Visual Studio Code.
+Actualizado hasta **FileMaker 2025 (v22)**.
 
-## Features
-
-Snippets, autocompletion, and syntax highlighting for FileMaker calculations.
-
-## Installation
-
-The best way to install is via the VSCode extension marketplace. Search `Filemaker VSCode` in the extensions tab within VSCode and click "install".
-
-[Or install from the marketplace site here](https://marketplace.visualstudio.com/items?itemName=jwillinghalpern.filemaker-vscode)
-
-## Usage
+## Características
 
 ### Syntax Highlighting
+Resaltado completo para funciones, parámetros Get(), operadores, strings y comentarios.
 
-![syntax-highlighting](./readme-highlighting.png)
+### Snippets — 354+ funciones
+Autocompletado para todas las funciones integradas hasta FileMaker 2025.
 
-### Autocomplete / Snippets
+### JSON → JSONSetElement()
+Selecciona cualquier JSON y ejecuta **FileMaker: JSON to JSONSetElement()** desde el Command Palette para convertirlo instantáneamente a una expresión FileMaker.
 
-![autocomplete](./readme-autocomplete.png)
+## Instalación
 
-### JSON to JSONSetElement() expression
+**Desde el Marketplace** — busca `FileMaker VSCode` en la pestaña Extensions.
 
-![json-to-jsonsetelement](./readme-json-to-fm.gif)
+**Manual** — descarga el `.vsix` desde [Releases](https://github.com/TU_USERNAME/filemaker-vscode/releases) y ejecuta:
+code --install-extension filemaker-vscode-x.x.x.vsix
 
-## Attribution
+## Extensiones soportadas
 
-Original syntax and snippets were ported from [Donovan Chandler's textmate bundle](https://github.com/DonovanChan/Filemaker.tmbundle), which was itself forked from [Matt Petrowsky's repo](https://github.com/petrowsky/filemaker.tmbundle).
+| Extensión | Uso |
+|-----------|-----|
+| `.fmfn` | Custom function |
+| `.fmcalc` | Cálculo FileMaker |
+| `.fmscript` | Cálculo en script step |
+| `.calc` | Cálculo genérico |
 
-[Carson Lind](https://eagleoptimizations.com/) created the icon artwork.
+## Novedades v2.0.0
 
----
+| Función | Versión |
+|---------|---------|
+| `JSONMakeArray` | FM 2024+ |
+| `JSONParse` / `JSONParsedState` | FM 2025+ |
+| `GetFieldsOnLayout` | FM 2025+ |
+| `GetTextFromPDF` | FM 2025+ |
+| `GetRecordIDsFromFoundSet` | FM 2025+ |
+| `GetLiveTextAsJSON` | FM 2024+ |
+| `Get(AIAccountName/AIModelName)` | FM 2024+ |
+| `CryptGeneratePassKey` | FM 2023+ |
 
-## Contributing
+Ver [CHANGELOG](CHANGELOG.md) completo.
 
-### Prerequisites
+## Contribuir
 
-1. Make sure you have NodeJS and npm installed: <https://nodejs.org/en/>
-2. Install vsce globally: `npm install -g vsce`
-3. Make sure git is installed: <https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>
-   1. MacOS hint: just run this in terminal and you'll be prompted to install: `git --version`
+Pull requests bienvenidos. Ver [CONTRIBUTING.md](CONTRIBUTING.md).
 
-### Dev/Test
+## Créditos
 
-1. Fork the GitHub repo.
-2. Clone your fork to your local machine:
-   1. In terminal, `cd` to the preferred directory.
-   2. Clone: `git clone <the URL from the "Code" button on github>`
-3. Open the project folder in VSCode to edit.
-4. When ready to test:
-   1. Open the integrated terminal in VSCode and run `vsce package` to create a package with a name like "filemaker-vscode-x.x.x.vsix"
-   2. Install your test package like `code --install-extension filemaker-vscode-x.x.x.vsix`
-   3. shift-command-p to open the command pallete and search for/run "Developer: Reload Window(s)"
-   4. Now test your extension in VSCode. Rinse, repeat until it works how you want.
-
-### Submit changes
-
-1. When ready, commit your changes and push them to your own fork on github.
-   1. `git add .`
-   2. `git commit -m "message describing your change"`
-   3. `git push`
-2. Submit a pull request to my repo so I can try them out and pull them in and publish!
+Sintaxis original de [Donovan Chandler](https://github.com/DonovanChan/Filemaker.tmbundle).
+Fork original de [jwillinghalpern](https://github.com/jwillinghalpern/filemaker-vscode-bundle).
