@@ -1,5 +1,27 @@
 # Change Log
 
+## [2.0.6] - 2026-05-21
+
+### Cobertura completa FM 2025
+- 136 parámetros Get() — lista oficial completa incluyendo FM 2024/2025
+- Todos los script steps en inglés desde la documentación oficial:
+  - Control, Navigation, Editing, Fields, Records, Found Sets
+  - Windows, Files, Accounts, Spelling, Open Menu Items
+  - AI script steps (Configure AI Account, Generate Response from Model, Perform Find by Natural Language, Perform RAG Action, etc.)
+- Script parameters/keywords en inglés (With dialog, Without dialog, Ascending, Descending, etc.)
+
+## [2.0.5] - 2026-05-21
+
+### Script steps
+- Reemplazados todos los script steps en español por lista completa en inglés
+- Añadidos todos los AI script steps de FM 2024/2025
+
+## [2.0.4] - 2026-05-21
+
+### Funciones AI completas
+- Añadidas 13 funciones AI/embeddings que faltaban
+- README completo con captura de pantalla y guía de colores
+
 ## [2.0.0] - 2025-05-21
 
 ### Nuevas funciones FM 2023 → 2025
