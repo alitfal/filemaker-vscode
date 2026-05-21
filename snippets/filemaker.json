@@ -11,6 +11,12 @@
     "description": "Acos",
     "scope": "source.filemaker"
   },
+  "AddEmbeddings": {
+    "prefix": "AddEmbeddings",
+    "body": "AddEmbeddings ( ${1:embedding1} ; ${2:embedding2} )$0",
+    "description": "Adds two embedding vectors and returns normalized result. FM 2024+",
+    "scope": "source.filemaker"
+  },
   "Asin": {
     "prefix": "Asin",
     "body": "Asin ( ${1:number} )$0",
@@ -109,6 +115,12 @@
     "prefix": "Cos",
     "body": "Cos ( ${1:angleInRadians} )$0",
     "description": "Cos",
+    "scope": "source.filemaker"
+  },
+  "CosineSimilarity": {
+    "prefix": "CosineSimilarity",
+    "body": "CosineSimilarity ( ${1:embedding1} ; ${2:embedding2} )$0",
+    "description": "Returns similarity between two embedding vectors (-1 to 1). FM 2024+",
     "scope": "source.filemaker"
   },
   "Count": {
@@ -1215,9 +1227,39 @@
     "description": "",
     "scope": "source.filemaker"
   },
+  "GetBaseTableName": {
+    "prefix": "GetBaseTableName",
+    "body": "GetBaseTableName ( ${1:field} )$0",
+    "description": "Returns the base table name of a field reference. FM 2025+",
+    "scope": "source.filemaker"
+  },
   "GetContainerAttribute": {
     "prefix": "GetContainerAttribute",
     "body": "GetContainerAttribute ( ${1:sourceField} ; ${2:album|all|artist|audio|bitrate|composer|coverArt|coverArt|dpiHeight|dpiWidth|duration|externalFiles|externalFiles|externalSize|filename|fileSize|genre|height|image|internalSize|latitude|longitude|make|md5|model|orientation|photo|storageType|timestamp|title|track|transparency|transparency|width|year} )",
+    "scope": "source.filemaker"
+  },
+  "GetContainerTextInfo": {
+    "prefix": "GetContainerTextInfo",
+    "body": "GetContainerTextInfo ( ${1:field} ; ${2:textInfo} )$0",
+    "description": "Returns information about text from a container field. FM 2023+",
+    "scope": "source.filemaker"
+  },
+  "GetEmbedding": {
+    "prefix": "GetEmbedding",
+    "body": "GetEmbedding ( ${1:modelName} ; ${2:inputData} )$0",
+    "description": "Sends input to embedding model and returns vector as container data. FM 2024+",
+    "scope": "source.filemaker"
+  },
+  "GetEmbeddingAsFile": {
+    "prefix": "GetEmbeddingAsFile",
+    "body": "GetEmbeddingAsFile ( ${1:embeddingText} )$0",
+    "description": "Converts embedding vector from text to binary container data. FM 2024+",
+    "scope": "source.filemaker"
+  },
+  "GetEmbeddingAsText": {
+    "prefix": "GetEmbeddingAsText",
+    "body": "GetEmbeddingAsText ( ${1:embeddingContainer} )$0",
+    "description": "Converts embedding vector from binary container to text format. FM 2024+",
     "scope": "source.filemaker"
   },
   "GetField": {
@@ -1286,6 +1328,12 @@
     "description": "GetNthRecord",
     "scope": "source.filemaker"
   },
+  "GetRAGSpaceInfo": {
+    "prefix": "GetRAGSpaceInfo",
+    "body": "GetRAGSpaceInfo ( ${1:spaceID} )$0",
+    "description": "Returns information about the specified RAG space. FM 2025+",
+    "scope": "source.filemaker"
+  },
   "GetRecordIDsFromFoundSet": {
     "prefix": "GetRecordIDsFromFoundSet",
     "body": "GetRecordIDsFromFoundSet ( ${1:type} )$0",
@@ -1310,6 +1358,12 @@
     "description": "GetSummary",
     "scope": "source.filemaker"
   },
+  "GetTableDDL": {
+    "prefix": "GetTableDDL",
+    "body": "GetTableDDL ( ${1:tableOccurrences} )$0",
+    "description": "Returns table info in DDL format for a JSON array of table occurrences. FM 2025+",
+    "scope": "source.filemaker"
+  },
   "GetTextFromPDF": {
     "prefix": "GetTextFromPDF",
     "body": "GetTextFromPDF ( ${1:containerField} )$0",
@@ -1320,6 +1374,12 @@
     "prefix": "GetThumbnail",
     "body": "GetThumbnail ( ${1:field} ; ${2:width} ; ${3:height} )$0",
     "description": "GetThumbnail",
+    "scope": "source.filemaker"
+  },
+  "GetTokenCount": {
+    "prefix": "GetTokenCount",
+    "body": "GetTokenCount ( ${1:modelName} ; ${2:text} )$0",
+    "description": "Returns the token count for the specified text. FM 2024+",
     "scope": "source.filemaker"
   },
   "GetValue": {
@@ -1676,6 +1736,12 @@
     "description": "MonthNameJ",
     "scope": "source.filemaker"
   },
+  "NormalizeEmbedding": {
+    "prefix": "NormalizeEmbedding",
+    "body": "NormalizeEmbedding ( ${1:embedding} )$0",
+    "description": "Normalizes an embedding vector. FM 2024+",
+    "scope": "source.filemaker"
+  },
   "NPV": {
     "prefix": "NPV",
     "body": "NPV ( ${1:payment} ; ${2:interestRate} )$0",
@@ -1710,6 +1776,12 @@
     "prefix": "Position",
     "body": "Position ( ${1:text} ; ${2:searchString} ; ${3:start} ; ${4:occurrence} )$0",
     "description": "Position",
+    "scope": "source.filemaker"
+  },
+  "PredictFromModel": {
+    "prefix": "PredictFromModel",
+    "body": "PredictFromModel ( ${1:modelName} ; ${2:embedding} )$0",
+    "description": "Returns predicted value from a trained regression model. FM 2024+",
     "scope": "source.filemaker"
   },
   "Proper": {
@@ -1896,6 +1968,12 @@
     "prefix": "Substitute list",
     "body": "Substitute ( ${1:text} ;\n\t[ \"${2:find1}\" ; \"${3:replace1}\" ] ;\n\t[ \"${4:find2}\" ; \"${5:replace2}\" ]\n)$0",
     "description": "Substitute con multiples pares buscar/reemplazar.",
+    "scope": "source.filemaker"
+  },
+  "SubtractEmbeddings": {
+    "prefix": "SubtractEmbeddings",
+    "body": "SubtractEmbeddings ( ${1:embedding1} ; ${2:embedding2} )$0",
+    "description": "Subtracts embedding v2 from v1 and returns normalized result. FM 2024+",
     "scope": "source.filemaker"
   },
   "Sum": {
