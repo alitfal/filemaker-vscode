@@ -1,11 +1,73 @@
-// Place your settings in this file to overwrite default and user settings.
 {
-    "files.exclude": {
-        "out": false // set this to true to hide the "out" folder with the compiled JS files
-    },
-    "search.exclude": {
-        "out": true // set this to false to include "out" folder in search results
-    },
-    // Turn off tsc task auto detection since we have the necessary tasks as npm scripts
-    "typescript.tsc.autoDetect": "off"
+  "editor.tokenColorCustomizations": {
+    "[Dracula Pro]": {
+      "textMateRules": [
+        {
+          "scope": "support.function.builtin_functions.filemaker",
+          "settings": { "foreground": "#BD93F9", "fontStyle": "bold" }
+        },
+        {
+          "scope": "support.function.external_functions.filemaker",
+          "settings": { "foreground": "#FF79C6", "fontStyle": "italic" }
+        },
+        {
+          "scope": "keyword.control.filemaker",
+          "settings": { "foreground": "#FF79C6", "fontStyle": "bold" }
+        },
+        {
+          "scope": "keyword.other.scriptStep.filemaker",
+          "settings": { "foreground": "#8BE9FD" }
+        },
+        {
+          "scope": "keyword.other.scriptParam.filemaker",
+          "settings": { "foreground": "#FFB86C" }
+        },
+        {
+          "scope": "variable.script_variable.local.filemaker",
+          "settings": { "foreground": "#F1FA8C" }
+        },
+        {
+          "scope": "variable.script_variable.global.filemaker",
+          "settings": { "foreground": "#FFB86C", "fontStyle": "bold" }
+        },
+        {
+          "scope": "constant.numeric.filemaker",
+          "settings": { "foreground": "#BD93F9" }
+        },
+        {
+          "scope": "support.constant.json.filemaker",
+          "settings": { "foreground": "#FF79C6" }
+        },
+        {
+          "scope": "constant.language.filemaker",
+          "settings": { "foreground": "#FF79C6" }
+        },
+        {
+          "scope": "string.quoted.double.filemaker",
+          "settings": { "foreground": "#F1FA8C" }
+        },
+        {
+          "scope": "comment.line.double-slash.filemaker",
+          "settings": { "foreground": "#6272A4", "fontStyle": "italic" }
+        },
+        {
+          "scope": "comment.line.hash.filemaker",
+          "settings": { "foreground": "#6272A4", "fontStyle": "italic" }
+        },
+        {
+          "scope": "comment.block.filemaker",
+          "settings": { "foreground": "#6272A4", "fontStyle": "italic" }
+        },
+        {
+          "scope": [
+            "keyword.operator.arithmetic.filemaker",
+            "keyword.operator.comparison.filemaker",
+            "keyword.operator.logical.filemaker",
+            "keyword.operator.string.filemaker"
+          ],
+          "settings": { "foreground": "#FF79C6" }
+        }
+      ]
+    }
+  }
 }

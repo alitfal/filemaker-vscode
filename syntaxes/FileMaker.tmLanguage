@@ -163,6 +163,55 @@
 			<key>name</key>
 			<string>keyword.operator.assignment.filemaker</string>
 		</dict>
+
+		<dict>
+			<key>match</key>
+			<string>\b(If|Else|End If|Loop|End Loop|Exit Loop If|While|End While)\b</string>
+			<key>name</key>
+			<string>keyword.control.filemaker</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(Establecer variable|Establecer campo|Nuevo registro/petición|Consignar registros/peticiones|Salir del guión|Ir a la presentación|Ir al registro relacionado|Mostrar cuadro de diálogo personalizado|Ejecutar búsqueda|Mostrar todos los registros|Eliminar todos los registros|Nueva ventana|Cerrar ventana|Refrescar ventana|Congelar ventana|Reemplazar contenido del campo|Ir a objeto|Ir a la fila del portal|Permitir cancelación del usuario|Establecer captura de errores)\b</string>
+			<key>name</key>
+			<string>keyword.other.scriptStep.filemaker</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(Valor|Activo|Inactivo|Sin diálogo|Restaurar|Seleccionar|Último|Primero)\b</string>
+			<key>name</key>
+			<string>keyword.other.scriptParam.filemaker</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>#[^\n]*</string>
+			<key>name</key>
+			<string>comment.line.hash.filemaker</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\$\$[A-Za-z_][A-Za-z0-9_]*</string>
+			<key>name</key>
+			<string>variable.script_variable.global.filemaker</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\$[A-Za-z_][A-Za-z0-9_]*</string>
+			<key>name</key>
+			<string>variable.script_variable.local.filemaker</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(JSONString|JSONNumber|JSONBoolean|JSONArray|JSONObject|JSONNull|JSONRaw)\b</string>
+			<key>name</key>
+			<string>support.constant.json.filemaker</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b[0-9]+(\.[0-9]+)?\b</string>
+			<key>name</key>
+			<string>constant.numeric.filemaker</string>
+		</dict>
 	</array>
 	<key>repository</key>
 	<dict>
