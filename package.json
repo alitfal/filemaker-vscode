@@ -1,8 +1,8 @@
 {
   "name": "filemaker-vscode-updated",
-  "displayName": "FileMaker VSCode (Updated)",
-  "description": "FileMaker syntax highlighting, snippets, and functions \u2014 updated through FileMaker 2025 (v22)",
-  "version": "2.0.7",
+  "displayName": "FileMaker Dev Tools",
+  "description": "FileMaker / Claris Pro syntax highlighting, snippets and autocompletion. Full FM 2025 coverage: 225+ functions, 200+ script steps, 136 Get() params, AI/embeddings/RAG support.",
+  "version": "2.0.8",
   "publisher": "alitfal",
   "scripts": {
     "vscode:prepublish": "npm run compile",
