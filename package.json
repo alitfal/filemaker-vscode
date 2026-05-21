@@ -2,7 +2,7 @@
   "name": "filemaker-vscode-updated",
   "displayName": "FileMaker VSCode (Updated)",
   "description": "FileMaker syntax highlighting, snippets, and functions \u2014 updated through FileMaker 2025 (v22)",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "publisher": "alitfal",
   "scripts": {
     "vscode:prepublish": "npm run compile",
