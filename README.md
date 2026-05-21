@@ -1,7 +1,7 @@
 # FileMaker VSCode
 
 > Syntax highlighting, autocompletado y snippets para cálculos y scripts de **FileMaker / Claris Pro** en Visual Studio Code.
-> Actualizado hasta **FileMaker 2025 (v22)** — incluyendo funciones de IA, embeddings y RAG.
+> Actualizado hasta **FileMaker 2025 (v22)** — cobertura completa de funciones, script steps, Get() params e IA.
 
 [![Version](https://img.shields.io/visual-studio-marketplace/v/alitfal.filemaker-vscode-updated?label=version)](https://marketplace.visualstudio.com/items?itemName=alitfal.filemaker-vscode-updated)
 [![Installs](https://img.shields.io/visual-studio-marketplace/i/alitfal.filemaker-vscode-updated)](https://marketplace.visualstudio.com/items?itemName=alitfal.filemaker-vscode-updated)
@@ -21,19 +21,19 @@ Colores diferenciados para cada tipo de elemento:
 | Elemento | Color |
 |----------|-------|
 | Funciones builtin | 🟣 Lila |
-| Funciones AI / Embeddings | 🩷 Rosa bold |
+| Funciones AI / Embeddings / RAG | 🩷 Rosa bold |
 | Funciones JSON | 🔵 Cian bold |
 | Funciones criptografía | 🟠 Naranja bold |
 | Funciones fecha / hora | 🟢 Verde |
 | Funciones aggregate | 🟡 Amarillo bold |
 | Variables locales `$var` | 🟡 Amarillo |
 | Variables globales `$$var` | 🟠 Naranja bold |
-| Control de flujo `If` / `End If` / `Loop` | 🩷 Rosa bold |
+| Control de flujo `If` / `Else If` / `End If` / `Loop` / `End Loop` | 🩷 Rosa bold |
 | Script steps | 🔵 Cian |
 | Strings | 🟡 Amarillo |
 | Comentarios `#` y `//` | ⚫ Gris itálica |
 
-### 📦 354+ Snippets
+### 📦 356+ Snippets
 Autocompletado para todas las funciones integradas de FileMaker hasta la versión 2025, con tab stops nombrados para navegar entre parámetros.
 
 Snippets de productividad incluidos:
@@ -107,30 +107,41 @@ Para archivos `.txt` o cualquier otro formato, selecciona el lenguaje manualment
 
 ---
 
-## 🆕 Novedades v2.0.x
+## 🆕 Cobertura completa FM 2025
 
-### Funciones nuevas FM 2023 → 2025
+### Funciones de cálculo (225+)
+Todas las funciones oficiales organizadas por categoría:
 
-| Función | Categoría | Versión |
-|---------|-----------|---------|
-| `JSONMakeArray` | JSON | FM 2024+ |
-| `JSONParse` / `JSONParsedState` | JSON | FM 2025+ |
-| `GetFieldsOnLayout` | AI | FM 2025+ |
-| `GetTextFromPDF` | Container | FM 2025+ |
-| `GetRecordIDsFromFoundSet` | Misc | FM 2025+ |
-| `GetLiveTextAsJSON` | Container | FM 2024+ |
-| `AddEmbeddings` | AI | FM 2024+ |
-| `CosineSimilarity` | AI | FM 2024+ |
-| `GetEmbedding` / `GetEmbeddingAsFile` / `GetEmbeddingAsText` | AI | FM 2024+ |
-| `GetRAGSpaceInfo` | AI | FM 2025+ |
-| `GetTableDDL` | AI | FM 2025+ |
-| `GetTokenCount` | AI | FM 2024+ |
-| `NormalizeEmbedding` / `SubtractEmbeddings` | AI | FM 2024+ |
-| `PredictFromModel` | AI | FM 2024+ |
-| `Get(AIAccountName)` / `Get(AIModelName)` | Get | FM 2024+ |
-| `CryptGeneratePassKey` | Crypto | FM 2023+ |
+| Categoría | Ejemplos |
+|-----------|---------|
+| Text | `Substitute`, `FilterValues`, `UniqueValues`, `GetTextFromPDF`... |
+| Number | `Abs`, `Round`, `SetPrecision`... |
+| Date / Time | `Date`, `Timestamp`, `WeekOfYear`... |
+| Container | `GetLiveTextAsJSON`, `GetContainerTextInfo`... |
+| JSON | `JSONParse`, `JSONParsedState`, `JSONMakeArray`... |
+| Logical | `Case`, `If`, `Let`, `While`, `SetRecursion`... |
+| AI | `GetEmbedding`, `CosineSimilarity`, `GetRAGSpaceInfo`, `GetTokenCount`... |
+| Crypto | `CryptGeneratePassKey`, `CryptGenerateSignature`... |
+| Aggregate | `Sum`, `Average`, `Count`, `StDev`... |
+| Design | `FieldNames`, `TableNames`, `ScriptNames`... |
+| Get | 136 parámetros — lista completa FM 2025 |
 
-Ver [CHANGELOG](CHANGELOG.md) completo.
+### Script steps (200+)
+Todas las categorías oficiales en inglés:
+
+| Categoría | Ejemplos |
+|-----------|---------|
+| Control | `If`, `Else If`, `End If`, `Loop`, `Exit Loop If`, `Perform Script`... |
+| Navigation | `Go to Layout`, `Go to Record`, `Go to Portal Row`... |
+| Editing | `Cut`, `Copy`, `Paste`, `Select All`... |
+| Fields | `Set Field`, `Replace Field Contents`, `Insert from URL`... |
+| Records | `New Record/Request`, `Delete Record/Request`, `Import Records`... |
+| Found Sets | `Perform Find`, `Show All Records`, `Sort Records`... |
+| Windows | `New Window`, `Close Window`, `Freeze Window`... |
+| Files | `Open File`, `Close File`, `Save a Copy as`, `Write to Data File`... |
+| Accounts | `Add Account`, `Delete Account`, `Re-Login`... |
+| AI | `Configure AI Account`, `Generate Response from Model`, `Perform Find by Natural Language`, `Perform RAG Action`... |
+| Miscellaneous | `Show Custom Dialog`, `Execute SQL`, `Send Mail`, `Open URL`... |
 
 ---
 
