@@ -36,7 +36,9 @@ Colors differentiated by element type — works out of the box with the included
 | Comments `#` and `//` | ⚫ Grey italic |
 
 ### 🖱️ Hover Documentation
-Hover over any FileMaker function to see its **signature, description, and example** inline — no need to leave VS Code.
+Hover over any FileMaker **calculation function** to see its signature, description, and example inline — no need to leave VS Code.
+
+> Hover is available for calculation functions (225+). Script steps are not yet covered.
 
 ### 📦 654+ Snippets
 The most complete FileMaker snippet library available:

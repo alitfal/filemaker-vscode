@@ -2,7 +2,7 @@
   "name": "filemaker-vscode-updated",
   "displayName": "FileMaker Dev Tools",
   "description": "FileMaker / Claris Pro syntax highlighting, snippets and autocompletion. Full FM 2025 coverage: 225+ functions, 200+ script steps, 136 Get() params, AI/embeddings/RAG support.",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "publisher": "alitfal",
   "scripts": {
     "vscode:prepublish": "npm run compile",
@@ -24,7 +24,7 @@
     "Programming Languages"
   ],
   "activationEvents": [
-    "onCommand:functions.jsonToJsonSetElement"
+    "onLanguage:filemaker"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -72,9 +72,7 @@
       }
     ]
   },
-  "dependencies": {
-    "fm-json-to-jsonsetelement": "file:./fm-json-lib"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/glob": "^7.2.0",
     "@types/mocha": "^9.1.1",
