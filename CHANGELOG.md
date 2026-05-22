@@ -1,5 +1,15 @@
 # Change Log
 
+## [2.2.1] - 2026-05-22
+
+### Bug fixes
+- Fixed extension activation error: `Cannot find module 'fm-json-to-jsonsetelement'`
+- Inlined fm-json library directly into extension — no external dependencies
+
+### Documentation
+- README clarified: hover documentation covers calculation functions (225+), not script steps
+- Hover docs scope noted in feature description
+
 ## [2.2.0] - 2026-05-22
 
 ### Major update — complete FileMaker Dev Tools
