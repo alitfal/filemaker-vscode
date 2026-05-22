@@ -268,7 +268,10 @@
     "scope": "source.filemaker"
   },
   "ExecuteSQL [full]": {
-    "prefix": "sqlf",
+    "prefix": [
+      "sqlf",
+      "sqlfull"
+    ],
     "body": "ExecuteSQL (\n\t\"SELECT ${2:fields}\n\t FROM ${3:TableName}\n\t WHERE ${4:condition}\n\t ORDER BY ${5:field}\" ;\n\t${6:fieldSeparator} ;\n\t${7:rowSeparator}\n)$0",
     "description": "ExecuteSQL full template with ORDER BY",
     "scope": "source.filemaker"
@@ -1442,10 +1445,28 @@
     "description": "If",
     "scope": "source.filemaker"
   },
+  "If [block]": {
+    "prefix": [
+      "ifb",
+      "If"
+    ],
+    "body": "If [ ${1:condition} ]\n\t$0\nEnd If",
+    "description": "If block with End If",
+    "scope": "source.filemaker"
+  },
   "If [inline]": {
     "prefix": "ifi",
     "body": "If ( ${1:condition} ; ${2:resultIfTrue} ; ${3:resultIfFalse} )$0",
     "description": "If inline con condicion/verdadero/falso.",
+    "scope": "source.filemaker"
+  },
+  "If Else [block]": {
+    "prefix": [
+      "ifeb",
+      "ife"
+    ],
+    "body": "If [ ${1:condition} ]\n\t$2\nElse\n\t$0\nEnd If",
+    "description": "If/Else block",
     "scope": "source.filemaker"
   },
   "If Else If [block]": {
@@ -1551,7 +1572,10 @@
     "scope": "source.filemaker"
   },
   "JSONSetElement [chain]": {
-    "prefix": "jsonset",
+    "prefix": [
+      "jsonset",
+      "jset"
+    ],
     "body": "JSONSetElement ( ${1:\"{}\"} ;\n\t[ \"${2:key1}\" ; ${3:value1} ; JSONString ] ;\n\t[ \"${4:key2}\" ; ${5:value2} ; JSONString ] ;\n\t[ \"${6:key3}\" ; ${7:value3} ; JSONString ]\n)$0",
     "description": "JSONSetElement with 3 key-value pairs",
     "scope": "source.filemaker"
@@ -1710,6 +1734,16 @@
     "prefix": "LookupNext",
     "body": "LookupNext ( ${1:sourceField} ; ${2:lower | higher} )$0",
     "description": "LookupNext",
+    "scope": "source.filemaker"
+  },
+  "Loop [block]": {
+    "prefix": [
+      "loop",
+      "Loop",
+      "LOOP"
+    ],
+    "body": "Loop\n\t$0\n\tExit Loop If [ ${1:condition} ]\nEnd Loop",
+    "description": "Loop block with Exit Loop If",
     "scope": "source.filemaker"
   },
   "Lower": {
@@ -2220,6 +2254,15 @@
     "prefix": "While",
     "body": "While ([\n\t${1:initValue1} = ${2:value1} ;\n\t${3:initValue2} = ${4:value2}\n];\n${5:condition};\n[\n\t${6:logic}\n];\n${7:result}\n)$0",
     "description": "while",
+    "scope": "source.filemaker"
+  },
+  "While [block]": {
+    "prefix": [
+      "whileb",
+      "While"
+    ],
+    "body": "While (\n\t[ ${1:initialVariables} ] ;\n\t${2:condition} ;\n\t[ ${3:logicVariables} ] ;\n\t${4:result}\n)$0",
+    "description": "While block fully expanded",
     "scope": "source.filemaker"
   },
   "While [template]": {
