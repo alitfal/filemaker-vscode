@@ -1,7 +1,7 @@
-# FileMaker VSCode
+# FileMaker Dev Tools
 
-> Syntax highlighting, autocompletion, and snippets for **FileMaker / Claris Pro** calculations and scripts in Visual Studio Code.
-> Full coverage through **FileMaker 2025 (v22)** — functions, script steps, Get() params, and AI.
+> The most complete Visual Studio Code extension for **FileMaker / Claris Pro** development.
+> Full coverage through **FileMaker 2025 (v22)** — functions, script steps, Get() params, AI, hover docs, and more.
 
 [![Version](https://img.shields.io/visual-studio-marketplace/v/alitfal.filemaker-vscode-updated?label=version)](https://marketplace.visualstudio.com/items?itemName=alitfal.filemaker-vscode-updated)
 [![Installs](https://img.shields.io/visual-studio-marketplace/i/alitfal.filemaker-vscode-updated)](https://marketplace.visualstudio.com/items?itemName=alitfal.filemaker-vscode-updated)
@@ -9,17 +9,17 @@
 
 ---
 
-![FileMaker VSCode Screenshot](resources/screenshot-dracula.png)
+![FileMaker Dev Tools Screenshot](resources/screenshot-dracula.png)
 
 ---
 
 ## ✨ Features
 
 ### 🎨 Category-based Syntax Highlighting
-Different colors for each type of element:
+Colors differentiated by element type — works out of the box with the included **FileMaker Dark** theme, or configurable for any theme.
 
-| Element | Color |
-|---------|-------|
+| Element | Color (FileMaker Dark) |
+|---------|----------------------|
 | Built-in functions | 🟣 Purple |
 | AI / Embeddings / RAG functions | 🩷 Pink bold |
 | JSON functions | 🔵 Cyan bold |
@@ -28,44 +28,106 @@ Different colors for each type of element:
 | Aggregate functions | 🟡 Yellow bold |
 | Local variables `$var` | 🟡 Yellow |
 | Global variables `$$var` | 🟠 Orange bold |
-| Control flow `If` / `Else If` / `End If` / `Loop` / `End Loop` | 🩷 Pink bold |
+| Table name `Table::` | 🟢 Green |
+| Field name `::Field` | ⬜ White |
+| Control flow `If` / `Else If` / `End If` / `Loop` | 🩷 Pink bold |
 | Script steps | 🔵 Cyan |
 | Strings | 🟡 Yellow |
 | Comments `#` and `//` | ⚫ Grey italic |
 
-### 📦 356+ Snippets
-Autocomplete for every built-in FileMaker function through version 2025, with named tab stops to navigate between parameters.
+### 🖱️ Hover Documentation
+Hover over any FileMaker function to see its **signature, description, and example** inline — no need to leave VS Code.
 
-Productivity snippets included:
+### 📦 654+ Snippets
+The most complete FileMaker snippet library available:
+
+**Quick Get() prefixes** — 136 snippets, one per parameter:
 
 | Prefix | Expands to |
 |--------|-----------|
-| `sqls` | ExecuteSQL with SELECT template |
-| `letm` | Let with multiple variables |
-| `ifi` | Inline If |
-| `whilet` | While with all 4 parameters |
-| `casei` | Inline Case with one condition and else |
-| `JSONSetElement multi` | JSONSetElement with multiple key-value pairs |
-| `JSONGetElement nested` | JSONGetElement with dot-notation path |
-| `Substitute list` | Substitute with multiple find/replace pairs |
+| `gdate` | `Get ( CurrentDate )` |
+| `gerr` | `Get ( LastError )` |
+| `gscript` | `Get ( ScriptName )` |
+| `gparam` | `Get ( ScriptParameter )` |
+| `grid` | `Get ( RecordID )` |
+| `gfound` | `Get ( FoundCount )` |
+| `gchoice` | `Get ( LastMessageChoice )` |
+| `gaiacct` | `Get ( AIAccountName )` |
+| `gtokens` | `Get ( LastStepTokensUsed )` |
+| ... | 127 more |
+
+**Block snippets:**
+
+| Prefix | Expands to |
+|--------|-----------|
+| `loop` | `Loop` / `Exit Loop If` / `End Loop` |
+| `ifb` | `If` / `End If` |
+| `ife` | `If` / `Else` / `End If` |
+| `ifeib` | `If` / `Else If` / `Else` / `End If` |
+| `whileb` | `While` with all 4 parameters |
+| `whilec` | `While` with counter pattern |
+| `caseb` | `Case` with multiple conditions |
+| `letb` | `Let` with multiple variables |
+| `sqlf` | `ExecuteSQL` with full SELECT template |
+| `iferr` | `If` error handling with `Get(LastError)` |
+
+**Script step snippets** — 137 snippets, one per script step:
+
+| Prefix | Expands to |
+|--------|-----------|
+| `ssdialog` | `Show Custom Dialog` with 2 buttons |
+| `sspf` | `Perform Find` with error handling |
+| `sssort` | `Sort Records` without dialog |
+| `ssairesp` | `Generate Response from Model` |
+| `ssrag` | `Perform RAG Action` |
+| `ssnlfind` | `Perform Find by Natural Language` |
+| `ssembedding` | `Insert Embedding` |
+| ... | 130 more |
+
+**Productivity snippets:**
+
+| Prefix | Expands to |
+|--------|-----------|
+| `sqls` | `ExecuteSQL` SELECT template |
+| `letm` | `Let` with multiple variables |
+| `ifi` | Inline `If` |
+| `jset` | `JSONSetElement` with 3 pairs |
+| `gol` | `Go to Layout` |
+| `gorr` | `Go to Related Record` |
 
 ### 🔧 JSON → JSONSetElement() Converter
-Select any JSON text and run **FileMaker: JSON to JSONSetElement()** from the Command Palette (`Cmd+Shift+P`) to instantly convert it to a FileMaker expression.
+Select any JSON and run **FileMaker: JSON to JSONSetElement()** from the Command Palette (`Cmd+Shift+P`) to instantly convert it to a FileMaker expression.
+
+### 🎯 Auto-indentation
+Automatic indentation for `If`, `Else If`, `Loop`, `While` blocks. `End If` and `End Loop` auto-outdent.
+
+### 📁 Code Folding
+Collapse `If/End If` and `Loop/End Loop` blocks using the fold arrows in the gutter.
+
+### 🌍 English + Spanish
+Script steps highlighted in both English and Spanish FileMaker installations.
 
 ---
 
 ## 📥 Installation
 
-**From the Marketplace** — search `FileMaker VSCode` in the VS Code Extensions tab and click Install.
+**From the Marketplace** — search `FileMaker Dev Tools` in the VS Code Extensions tab and click Install.
 
 **Manual** — download the `.vsix` from [Releases](https://github.com/alitfal/filemaker-vscode/releases) and run:
 code --install-extension filemaker-vscode-updated-x.x.x.vsix
 
 ---
 
-## 🎨 Color Setup (Dracula Pro)
+## 🎨 Theme Setup
 
-To get the colors shown in the screenshot, add the following to your VS Code `settings.json` (`Cmd+Shift+P` → `Open User Settings JSON`):
+### Option A — Use the included theme (recommended)
+1. `Cmd+Shift+P` → `Color Theme`
+2. Select **FileMaker Dark**
+
+No additional configuration needed.
+
+### Option B — Dracula Pro
+Add to your VS Code `settings.json` (`Cmd+Shift+P` → `Open User Settings JSON`):
 
 ```json
 "editor.tokenColorCustomizations": {
@@ -82,6 +144,8 @@ To get the colors shown in the screenshot, add the following to your VS Code `se
       { "scope": "keyword.other.scriptParam.filemaker", "settings": { "foreground": "#FFB86C" } },
       { "scope": "variable.script_variable.local.filemaker", "settings": { "foreground": "#F1FA8C" } },
       { "scope": "variable.script_variable.global.filemaker", "settings": { "foreground": "#FFB86C", "fontStyle": "bold" } },
+      { "scope": "entity.name.table.filemaker", "settings": { "foreground": "#50FA7B" } },
+      { "scope": "variable.other.field.filemaker", "settings": { "foreground": "#F8F8F2" } },
       { "scope": "constant.numeric.filemaker", "settings": { "foreground": "#BD93F9" } },
       { "scope": "string.quoted.double.filemaker", "settings": { "foreground": "#F1FA8C" } },
       { "scope": "comment.line.hash.filemaker", "settings": { "foreground": "#6272A4", "fontStyle": "italic" } },
@@ -103,14 +167,13 @@ To get the colors shown in the screenshot, add the following to your VS Code `se
 | `.fmscript` | Script step calculation |
 | `.calc` | Generic calculation file |
 
-For `.txt` or other file types, manually select the language in the VS Code status bar → `Plain Text` → `FileMaker`.
+For `.txt` or other formats, select the language manually in the VS Code status bar → `Plain Text` → `FileMaker`.
 
 ---
 
 ## 🆕 Complete FM 2025 Coverage
 
 ### Calculation Functions (225+)
-All official functions organized by category:
 
 | Category | Examples |
 |----------|---------|
@@ -127,7 +190,6 @@ All official functions organized by category:
 | Get | 136 parameters — complete FM 2025 list |
 
 ### Script Steps (200+)
-All official categories in English:
 
 | Category | Examples |
 |----------|---------|

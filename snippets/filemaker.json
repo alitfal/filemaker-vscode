@@ -11,10 +11,34 @@
     "description": "Acos",
     "scope": "source.filemaker"
   },
+  "Add Account [ss]": {
+    "prefix": "ssaddacct",
+    "body": "Add Account [\n\tAccount Name: ${1:accountName};\n\tPassword: ${2:password};\n\tPrivilege Set: \"${3:[Data Entry Only]}\"\n]$0",
+    "description": "Add Account",
+    "scope": "source.filemaker"
+  },
   "AddEmbeddings": {
     "prefix": "AddEmbeddings",
     "body": "AddEmbeddings ( ${1:embedding1} ; ${2:embedding2} )$0",
     "description": "Adds two embedding vectors and returns normalized result. FM 2024+",
+    "scope": "source.filemaker"
+  },
+  "Adjust Window [ss]": {
+    "prefix": "ssadjwin",
+    "body": "Adjust Window [ ${1:Resize to Fit} ]$0",
+    "description": "Adjust Window",
+    "scope": "source.filemaker"
+  },
+  "Allow User Abort [ss]": {
+    "prefix": "ssabort",
+    "body": "Allow User Abort [ ${1:On} ]$0",
+    "description": "Allow User Abort script step",
+    "scope": "source.filemaker"
+  },
+  "Arrange All Windows [ss]": {
+    "prefix": "ssarrange",
+    "body": "Arrange All Windows [ ${1:Tile Horizontally} ]$0",
+    "description": "Arrange All Windows",
     "scope": "source.filemaker"
   },
   "Asin": {
@@ -51,6 +75,12 @@
     "description": "",
     "scope": "source.filemaker"
   },
+  "Beep [ss]": {
+    "prefix": "ssbeep",
+    "body": "Beep$0",
+    "description": "Beep",
+    "scope": "source.filemaker"
+  },
   "Case [block]": {
     "prefix": "caseb",
     "body": "Case (\n\t${1:condition1} ; ${2:result1} ;\n\t${3:condition2} ; ${4:result2} ;\n\t${5:elseResult}\n)$0",
@@ -75,6 +105,12 @@
     "description": "Ceiling",
     "scope": "source.filemaker"
   },
+  "Change Password [ss]": {
+    "prefix": "sschangepw",
+    "body": "Change Password [ With dialog: Off;\n\tOld Password: ${1:oldPwd};\n\tNew Password: ${2:newPwd}\n]$0",
+    "description": "Change Password",
+    "scope": "source.filemaker"
+  },
   "Char": {
     "prefix": "Char",
     "body": "Char ( ${1:number} )$0",
@@ -85,6 +121,30 @@
     "prefix": "Choose",
     "body": "Choose ( ${1:test} ; ${2:result0} ; ${3:result1} )",
     "description": "Choose",
+    "scope": "source.filemaker"
+  },
+  "Clear [ss]": {
+    "prefix": "ssclear",
+    "body": "Clear [ ${1:Select} ]$0",
+    "description": "Clear",
+    "scope": "source.filemaker"
+  },
+  "Close File [ss]": {
+    "prefix": "ssclosef",
+    "body": "Close File [ \"${1:filename}\" ]$0",
+    "description": "Close File",
+    "scope": "source.filemaker"
+  },
+  "Close Popover [ss]": {
+    "prefix": "ssclosepop",
+    "body": "Close Popover$0",
+    "description": "Close Popover",
+    "scope": "source.filemaker"
+  },
+  "Close Window [ss]": {
+    "prefix": "ssclosew",
+    "body": "Close Window [ Current Window ]$0",
+    "description": "Close Window",
     "scope": "source.filemaker"
   },
   "Code": {
@@ -99,10 +159,52 @@
     "description": "Combination",
     "scope": "source.filemaker"
   },
+  "Commit Records/Requests [ss]": {
+    "prefix": "sscommit",
+    "body": "Commit Records/Requests [ With dialog: Off ]$0",
+    "description": "Commit Records/Requests",
+    "scope": "source.filemaker"
+  },
+  "Commit Transaction [ss]": {
+    "prefix": "sscommittx",
+    "body": "Commit Transaction$0",
+    "description": "Commit Transaction script step",
+    "scope": "source.filemaker"
+  },
   "ComputeModel": {
     "prefix": "ComputeModel",
     "body": "ComputeModel ( ${1:modelName} ; ${2:name1} ; ${3:value1} )",
     "description": "Returns a JSON object containing the result of the Core ML model evaluation.",
+    "scope": "source.filemaker"
+  },
+  "Configure AI Account [ss]": {
+    "prefix": "ssaiconfig",
+    "body": "Configure AI Account [\n\tName: \"${1:myAI}\";\n\tModel Provider: OpenAI;\n\tAPI Key: \"${2:key}\"\n]$0",
+    "description": "Configure AI Account. FM 2024+",
+    "scope": "source.filemaker"
+  },
+  "Configure Machine Learning Model [ss]": {
+    "prefix": "ssmlmodel",
+    "body": "Configure Machine Learning Model [\n\tName: \"${1:modelName}\";\n\tModel File: ${2:Table::Field}\n]$0",
+    "description": "Configure Machine Learning Model. FM 2024+",
+    "scope": "source.filemaker"
+  },
+  "Configure Prompt Template [ss]": {
+    "prefix": "ssaiprompt",
+    "body": "Configure Prompt Template [\n\tName: \"${1:templateName}\";\n\tTemplate: \"${2:You are a helpful assistant. {userPrompt}}\"\n]$0",
+    "description": "Configure Prompt Template. FM 2024+",
+    "scope": "source.filemaker"
+  },
+  "Configure RAG Account [ss]": {
+    "prefix": "ssragconfig",
+    "body": "Configure RAG Account [\n\tName: \"${1:myRAG}\";\n\tAPI Key: \"${2:key}\"\n]$0",
+    "description": "Configure RAG Account. FM 2025+",
+    "scope": "source.filemaker"
+  },
+  "Constrain Found Set [ss]": {
+    "prefix": "ssconstrain",
+    "body": "Constrain Found Set [ Restore ]$0",
+    "description": "Constrain Found Set",
     "scope": "source.filemaker"
   },
   "ConvertFromFileMakerPath": {
@@ -115,6 +217,18 @@
     "prefix": "ConvertToFileMakerPath",
     "body": "ConvertToFileMakerPath ( ${1:standardPath} ; ${2:format} )",
     "description": "Converts a path in standard format to FileMaker format.",
+    "scope": "source.filemaker"
+  },
+  "Copy [ss]": {
+    "prefix": "sscopy",
+    "body": "Copy [ ${1:Select} ]$0",
+    "description": "Copy",
+    "scope": "source.filemaker"
+  },
+  "Copy All Records/Requests [ss]": {
+    "prefix": "sscopyall",
+    "body": "Copy All Records/Requests$0",
+    "description": "Copy All Records/Requests",
     "scope": "source.filemaker"
   },
   "Cos": {
@@ -133,6 +247,12 @@
     "prefix": "Count",
     "body": "Count ( ${1:field1}${2: ; field2...} )$0",
     "description": "Count",
+    "scope": "source.filemaker"
+  },
+  "Create Data File [ss]": {
+    "prefix": "sscreatedf",
+    "body": "Create Data File [ \"${1:filename}\"; ${2:target} ]$0",
+    "description": "Create Data File",
     "scope": "source.filemaker"
   },
   "CryptAuthCode": {
@@ -189,6 +309,12 @@
     "description": "CryptVerifySignature",
     "scope": "source.filemaker"
   },
+  "Cut [ss]": {
+    "prefix": "sscut",
+    "body": "Cut [ ${1:Select} ]$0",
+    "description": "Cut",
+    "scope": "source.filemaker"
+  },
   "DatabaseNames": {
     "prefix": "DatabaseNames",
     "body": "DatabaseNames",
@@ -237,10 +363,76 @@
     "description": "Degrees",
     "scope": "source.filemaker"
   },
+  "Delete Account [ss]": {
+    "prefix": "ssdelacct",
+    "body": "Delete Account [ Account Name: ${1:accountName} ]$0",
+    "description": "Delete Account",
+    "scope": "source.filemaker"
+  },
+  "Delete All Records [ss]": {
+    "prefix": "ssdelall",
+    "body": "Delete All Records [ With dialog: Off ]$0",
+    "description": "Delete All Records",
+    "scope": "source.filemaker"
+  },
+  "Delete File [ss]": {
+    "prefix": "ssdeletef",
+    "body": "Delete File [ \"${1:filename}\" ]$0",
+    "description": "Delete File",
+    "scope": "source.filemaker"
+  },
+  "Delete Portal Row [ss]": {
+    "prefix": "ssdelprow",
+    "body": "Delete Portal Row [ With dialog: Off ]$0",
+    "description": "Delete Portal Row",
+    "scope": "source.filemaker"
+  },
+  "Delete Record/Request [ss]": {
+    "prefix": "ssdelrec",
+    "body": "Delete Record/Request [ With dialog: Off ]$0",
+    "description": "Delete Record/Request",
+    "scope": "source.filemaker"
+  },
+  "Dial Phone [ss]": {
+    "prefix": "ssdial",
+    "body": "Dial Phone [ ${1:phoneNumber}; With dialog: Off ]$0",
+    "description": "Dial Phone",
+    "scope": "source.filemaker"
+  },
   "Div": {
     "prefix": "Div",
     "body": "Div ( ${1:number} ; ${2:divisor} )$0",
     "description": "Div",
+    "scope": "source.filemaker"
+  },
+  "Duplicate Record/Request [ss]": {
+    "prefix": "ssduprec",
+    "body": "Duplicate Record/Request$0",
+    "description": "Duplicate Record/Request",
+    "scope": "source.filemaker"
+  },
+  "Enable Account [ss]": {
+    "prefix": "ssenableacct",
+    "body": "Enable Account [ Account Name: ${1:accountName}; ${2:Enable} ]$0",
+    "description": "Enable Account",
+    "scope": "source.filemaker"
+  },
+  "Enter Browse Mode [ss]": {
+    "prefix": "ssbrowse",
+    "body": "Enter Browse Mode [ ${1:Pause} ]$0",
+    "description": "Enter Browse Mode",
+    "scope": "source.filemaker"
+  },
+  "Enter Find Mode [ss]": {
+    "prefix": "ssfind",
+    "body": "Enter Find Mode [ ${1:Pause} ]$0",
+    "description": "Enter Find Mode",
+    "scope": "source.filemaker"
+  },
+  "Enter Preview Mode [ss]": {
+    "prefix": "sspreview",
+    "body": "Enter Preview Mode [ ${1:Pause} ]$0",
+    "description": "Enter Preview Mode",
     "scope": "source.filemaker"
   },
   "Evaluate": {
@@ -259,6 +451,18 @@
     "prefix": "Exact",
     "body": "Exact ( ${1:originalText} ; ${2:comparisonText} )$0",
     "description": "Exact",
+    "scope": "source.filemaker"
+  },
+  "Execute FileMaker Data API [ss]": {
+    "prefix": "ssdataapi",
+    "body": "Execute FileMaker Data API [\n\tMethod: ${1:GET};\n\tEndpoint: \"${2:/layouts/MyLayout/records}\";\n\tTarget: ${3:Table::Field}\n]$0",
+    "description": "Execute FileMaker Data API. FM 2024+",
+    "scope": "source.filemaker"
+  },
+  "Execute SQL [ss]": {
+    "prefix": "ssexecsql",
+    "body": "Execute SQL [\n\t\"${1:INSERT INTO TableName (field1) VALUES (?)}\"\n\t; ${2:value1}\n]$0",
+    "description": "Execute SQL script step",
     "scope": "source.filemaker"
   },
   "ExecuteSQL": {
@@ -294,8 +498,20 @@
     "description": "",
     "scope": "source.filemaker"
   },
+  "Exit Application [ss]": {
+    "prefix": "ssexitapp",
+    "body": "Exit Application$0",
+    "description": "Exit Application",
+    "scope": "source.filemaker"
+  },
   "Exit Script [block]": {
     "prefix": "es",
+    "body": "Exit Script [ Text Result: ${1:result} ]$0",
+    "description": "Exit Script with result",
+    "scope": "source.filemaker"
+  },
+  "Exit Script [ss]": {
+    "prefix": "ssexit",
     "body": "Exit Script [ Text Result: ${1:result} ]$0",
     "description": "Exit Script with result",
     "scope": "source.filemaker"
@@ -306,10 +522,28 @@
     "description": "Exp",
     "scope": "source.filemaker"
   },
+  "Export Field Contents [ss]": {
+    "prefix": "ssexportf",
+    "body": "Export Field Contents [ ${1:Table::Field}; \"${2:filename}\" ]$0",
+    "description": "Export Field Contents",
+    "scope": "source.filemaker"
+  },
+  "Export Records [ss]": {
+    "prefix": "ssexport",
+    "body": "Export Records [ With dialog: Off;\n\t\"${1:filename.xlsx}\";\n\tWindows Roman\n]$0",
+    "description": "Export Records",
+    "scope": "source.filemaker"
+  },
   "Extend": {
     "prefix": "Extend",
     "body": "Extend ( ${1:non-repeatingField} )$0",
     "description": "Extend",
+    "scope": "source.filemaker"
+  },
+  "Extend Found Set [ss]": {
+    "prefix": "ssextend",
+    "body": "Extend Found Set [ Restore ]$0",
+    "description": "Extend Found Set",
     "scope": "source.filemaker"
   },
   "Factorial": {
@@ -372,10 +606,28 @@
     "description": "FilterValues",
     "scope": "source.filemaker"
   },
+  "Find Matching Records [ss]": {
+    "prefix": "ssfindmatch",
+    "body": "Find Matching Records [ ${1:Table::Field} ]$0",
+    "description": "Find Matching Records",
+    "scope": "source.filemaker"
+  },
   "Floor": {
     "prefix": "Floor",
     "body": "Floor ( ${1:number} )$0",
     "description": "Floor",
+    "scope": "source.filemaker"
+  },
+  "Flush Cache to Disk [ss]": {
+    "prefix": "ssflushcache",
+    "body": "Flush Cache to Disk$0",
+    "description": "Flush Cache to Disk",
+    "scope": "source.filemaker"
+  },
+  "Freeze Window [ss]": {
+    "prefix": "ssfreeze",
+    "body": "Freeze Window$0",
+    "description": "Freeze Window",
     "scope": "source.filemaker"
   },
   "Furigana": {
@@ -390,10 +642,22 @@
     "description": "Returns the future value (FV) of an initial investment, based on a constant interest rate and payment amount for the number of periods in months.",
     "scope": "source.filemaker"
   },
+  "Generate Response from Model [ss]": {
+    "prefix": "ssairesp",
+    "body": "Generate Response from Model [\n\tModel: \"${1:myAI}\";\n\tPrompt: \"${2:prompt}\";\n\tTarget: ${3:Table::Field}\n]$0",
+    "description": "Generate Response from Model. FM 2024+",
+    "scope": "source.filemaker"
+  },
   "Get(AccountExtendedPrivileges)": {
     "prefix": "Get ( AccountExtendedPrivileges )",
     "body": "Get ( AccountExtendedPrivileges )",
     "description": "AccountExtendedPrivileges",
+    "scope": "source.filemaker"
+  },
+  "Get(AccountExtendedPrivileges) [quick]": {
+    "prefix": "gacctexp",
+    "body": "Get ( AccountExtendedPrivileges )$0",
+    "description": "Get account extended privileges",
     "scope": "source.filemaker"
   },
   "Get(AccountGroupName)": {
@@ -402,10 +666,22 @@
     "description": "AccountGroupName",
     "scope": "source.filemaker"
   },
+  "Get(AccountGroupName) [quick]": {
+    "prefix": "gacctgrp",
+    "body": "Get ( AccountGroupName )$0",
+    "description": "Get account group name",
+    "scope": "source.filemaker"
+  },
   "Get(AccountName)": {
     "prefix": "Get ( AccountName )",
     "body": "Get ( AccountName )",
     "description": "AccountName",
+    "scope": "source.filemaker"
+  },
+  "Get(AccountName) [quick]": {
+    "prefix": "gacct",
+    "body": "Get ( AccountName )$0",
+    "description": "Get account name",
     "scope": "source.filemaker"
   },
   "Get(AccountPrivilegeSetName)": {
@@ -414,10 +690,22 @@
     "description": "AccountPrivilegeSetName",
     "scope": "source.filemaker"
   },
+  "Get(AccountPrivilegeSetName) [quick]": {
+    "prefix": "gacctpriv",
+    "body": "Get ( AccountPrivilegeSetName )$0",
+    "description": "Get account privilege set name",
+    "scope": "source.filemaker"
+  },
   "Get(AccountType)": {
     "prefix": "Get ( AccountType )",
     "body": "Get ( AccountType )",
     "description": "AccountType",
+    "scope": "source.filemaker"
+  },
+  "Get(AccountType) [quick]": {
+    "prefix": "gaccttype",
+    "body": "Get ( AccountType )$0",
+    "description": "Get account type",
     "scope": "source.filemaker"
   },
   "Get(ActiveFieldContents)": {
@@ -426,10 +714,22 @@
     "description": "ActiveFieldContents",
     "scope": "source.filemaker"
   },
+  "Get(ActiveFieldContents) [quick]": {
+    "prefix": "gcontents",
+    "body": "Get ( ActiveFieldContents )$0",
+    "description": "Get active field contents",
+    "scope": "source.filemaker"
+  },
   "Get(ActiveFieldName)": {
     "prefix": "Get ( ActiveFieldName )",
     "body": "Get ( ActiveFieldName )",
     "description": "ActiveFieldName",
+    "scope": "source.filemaker"
+  },
+  "Get(ActiveFieldName) [quick]": {
+    "prefix": "gfield",
+    "body": "Get ( ActiveFieldName )$0",
+    "description": "Get active field name",
     "scope": "source.filemaker"
   },
   "Get(ActiveFieldTableName)": {
@@ -438,10 +738,22 @@
     "description": "ActiveFieldTableName",
     "scope": "source.filemaker"
   },
+  "Get(ActiveFieldTableName) [quick]": {
+    "prefix": "gfieldtable",
+    "body": "Get ( ActiveFieldTableName )$0",
+    "description": "Get active field table name",
+    "scope": "source.filemaker"
+  },
   "Get(ActiveLayoutObjectName)": {
     "prefix": "Get ( ActiveLayoutObjectName )",
     "body": "Get ( ActiveLayoutObjectName )",
     "description": "ActiveLayoutObjectName",
+    "scope": "source.filemaker"
+  },
+  "Get(ActiveLayoutObjectName) [quick]": {
+    "prefix": "gobj",
+    "body": "Get ( ActiveLayoutObjectName )$0",
+    "description": "Get active layout object name",
     "scope": "source.filemaker"
   },
   "Get(ActiveModifierKeys)": {
@@ -450,10 +762,22 @@
     "description": "ActiveModifierKeys",
     "scope": "source.filemaker"
   },
+  "Get(ActiveModifierKeys) [quick]": {
+    "prefix": "gmodkeys",
+    "body": "Get ( ActiveModifierKeys )$0",
+    "description": "Get active modifier keys",
+    "scope": "source.filemaker"
+  },
   "Get(ActivePortalRowNumber)": {
     "prefix": "Get ( ActivePortalRowNumber )",
     "body": "Get ( ActivePortalRowNumber )",
     "description": "ActivePortalRowNumber",
+    "scope": "source.filemaker"
+  },
+  "Get(ActivePortalRowNumber) [quick]": {
+    "prefix": "gportalrow",
+    "body": "Get ( ActivePortalRowNumber )$0",
+    "description": "Get active portal row number",
     "scope": "source.filemaker"
   },
   "Get(ActiveRecordNumber)": {
@@ -462,10 +786,22 @@
     "description": "ActiveRecordNumber",
     "scope": "source.filemaker"
   },
+  "Get(ActiveRecordNumber) [quick]": {
+    "prefix": "gactiverec",
+    "body": "Get ( ActiveRecordNumber )$0",
+    "description": "Get active record number",
+    "scope": "source.filemaker"
+  },
   "Get(ActiveRepetitionNumber)": {
     "prefix": "Get ( ActiveRepetitionNumber )",
     "body": "Get ( ActiveRepetitionNumber )",
     "description": "ActiveRepetitionNumber",
+    "scope": "source.filemaker"
+  },
+  "Get(ActiveRepetitionNumber) [quick]": {
+    "prefix": "grep",
+    "body": "Get ( ActiveRepetitionNumber )$0",
+    "description": "Get active repetition number",
     "scope": "source.filemaker"
   },
   "Get(ActiveSelectionSize)": {
@@ -474,10 +810,22 @@
     "description": "ActiveSelectionSize",
     "scope": "source.filemaker"
   },
+  "Get(ActiveSelectionSize) [quick]": {
+    "prefix": "gselsize",
+    "body": "Get ( ActiveSelectionSize )$0",
+    "description": "Get active selection size",
+    "scope": "source.filemaker"
+  },
   "Get(ActiveSelectionStart)": {
     "prefix": "Get ( ActiveSelectionStart )",
     "body": "Get ( ActiveSelectionStart )",
     "description": "ActiveSelectionStart",
+    "scope": "source.filemaker"
+  },
+  "Get(ActiveSelectionStart) [quick]": {
+    "prefix": "gselstart",
+    "body": "Get ( ActiveSelectionStart )$0",
+    "description": "Get active selection start",
     "scope": "source.filemaker"
   },
   "Get(AIAccountName)": {
@@ -486,10 +834,22 @@
     "description": "Returns the name of the default AI account. FM 2024+",
     "scope": "source.filemaker"
   },
+  "Get(AIAccountName) [quick]": {
+    "prefix": "gaiacct",
+    "body": "Get ( AIAccountName )$0",
+    "description": "Get AI account name. FM 2024+",
+    "scope": "source.filemaker"
+  },
   "Get(AIModelName)": {
     "prefix": "Get(AIModelName)",
     "body": "Get ( AIModelName )$0",
     "description": "Returns the name of the default AI model. FM 2024+",
+    "scope": "source.filemaker"
+  },
+  "Get(AIModelName) [quick]": {
+    "prefix": "gaimodel",
+    "body": "Get ( AIModelName )$0",
+    "description": "Get AI model name. FM 2024+",
     "scope": "source.filemaker"
   },
   "Get(AllowAbortState)": {
@@ -498,10 +858,22 @@
     "description": "AllowAbortState",
     "scope": "source.filemaker"
   },
+  "Get(AllowAbortState) [quick]": {
+    "prefix": "gabort",
+    "body": "Get ( AllowAbortState )$0",
+    "description": "Get allow abort state",
+    "scope": "source.filemaker"
+  },
   "Get(AllowFormattingBarState)": {
     "prefix": "Get ( AllowFormattingBarState )",
     "body": "Get ( AllowFormattingBarState )",
     "description": "AllowFormattingBarState",
+    "scope": "source.filemaker"
+  },
+  "Get(AllowFormattingBarState) [quick]": {
+    "prefix": "gfmtbar",
+    "body": "Get ( AllowFormattingBarState )$0",
+    "description": "Get allow formatting bar state",
     "scope": "source.filemaker"
   },
   "Get(ApplicationArchitecture)": {
@@ -510,10 +882,22 @@
     "description": "ApplicationArchitecture",
     "scope": "source.filemaker"
   },
+  "Get(ApplicationArchitecture) [quick]": {
+    "prefix": "garch",
+    "body": "Get ( ApplicationArchitecture )$0",
+    "description": "Get application architecture",
+    "scope": "source.filemaker"
+  },
   "Get(ApplicationLanguage)": {
     "prefix": "Get ( ApplicationLanguage )",
     "body": "Get ( ApplicationLanguage )",
     "description": "ApplicationLanguage",
+    "scope": "source.filemaker"
+  },
+  "Get(ApplicationLanguage) [quick]": {
+    "prefix": "glang",
+    "body": "Get ( ApplicationLanguage )$0",
+    "description": "Get application language",
     "scope": "source.filemaker"
   },
   "Get(ApplicationVersion)": {
@@ -522,10 +906,34 @@
     "description": "ApplicationVersion",
     "scope": "source.filemaker"
   },
+  "Get(ApplicationVersion) [quick]": {
+    "prefix": "gversion",
+    "body": "Get ( ApplicationVersion )$0",
+    "description": "Get application version",
+    "scope": "source.filemaker"
+  },
+  "Get(CacheFileName) [quick]": {
+    "prefix": "gcachefile",
+    "body": "Get ( CacheFileName )$0",
+    "description": "Get cache file name",
+    "scope": "source.filemaker"
+  },
+  "Get(CacheFilePath) [quick]": {
+    "prefix": "gcachepath",
+    "body": "Get ( CacheFilePath )$0",
+    "description": "Get cache file path",
+    "scope": "source.filemaker"
+  },
   "Get(CalculationRepetitionNumber)": {
     "prefix": "Get ( CalculationRepetitionNumber )",
     "body": "Get ( CalculationRepetitionNumber )",
     "description": "CalculationRepetitionNumber",
+    "scope": "source.filemaker"
+  },
+  "Get(CalculationRepetitionNumber) [quick]": {
+    "prefix": "gcalcrep",
+    "body": "Get ( CalculationRepetitionNumber )$0",
+    "description": "Get calculation repetition number",
     "scope": "source.filemaker"
   },
   "Get(ConnectionAttributes)": {
@@ -534,10 +942,22 @@
     "description": "ConnectionAttributes",
     "scope": "source.filemaker"
   },
+  "Get(ConnectionAttributes) [quick]": {
+    "prefix": "gconnattr",
+    "body": "Get ( ConnectionAttributes )$0",
+    "description": "Get connection attributes",
+    "scope": "source.filemaker"
+  },
   "Get(ConnectionState)": {
     "prefix": "Get ( ConnectionState )",
     "body": "Get ( ConnectionState )",
     "description": "ConnectionState",
+    "scope": "source.filemaker"
+  },
+  "Get(ConnectionState) [quick]": {
+    "prefix": "gconnstate",
+    "body": "Get ( ConnectionState )$0",
+    "description": "Get connection state",
     "scope": "source.filemaker"
   },
   "Get(CurrentDate)": {
@@ -546,10 +966,22 @@
     "description": "CurrentDate",
     "scope": "source.filemaker"
   },
+  "Get(CurrentDate) [quick]": {
+    "prefix": "gdate",
+    "body": "Get ( CurrentDate )$0",
+    "description": "Get current date",
+    "scope": "source.filemaker"
+  },
   "Get(CurrentExtendedPrivileges)": {
     "prefix": "Get ( CurrentExtendedPrivileges )",
     "body": "Get ( CurrentExtendedPrivileges )",
     "description": "CurrentExtendedPrivileges",
+    "scope": "source.filemaker"
+  },
+  "Get(CurrentExtendedPrivileges) [quick]": {
+    "prefix": "gcurrpriv",
+    "body": "Get ( CurrentExtendedPrivileges )$0",
+    "description": "Get current extended privileges",
     "scope": "source.filemaker"
   },
   "Get(CurrentHostTimestamp)": {
@@ -558,10 +990,22 @@
     "description": "CurrentHostTimestamp",
     "scope": "source.filemaker"
   },
+  "Get(CurrentHostTimestamp) [quick]": {
+    "prefix": "ghostts",
+    "body": "Get ( CurrentHostTimestamp )$0",
+    "description": "Get current host timestamp",
+    "scope": "source.filemaker"
+  },
   "Get(CurrentPrivilegeSetName)": {
     "prefix": "Get ( CurrentPrivilegeSetName )",
     "body": "Get ( CurrentPrivilegeSetName )",
     "description": "CurrentPrivilegeSetName",
+    "scope": "source.filemaker"
+  },
+  "Get(CurrentPrivilegeSetName) [quick]": {
+    "prefix": "gpriv",
+    "body": "Get ( CurrentPrivilegeSetName )$0",
+    "description": "Get current privilege set name",
     "scope": "source.filemaker"
   },
   "Get(CurrentTime)": {
@@ -570,10 +1014,28 @@
     "description": "CurrentTime",
     "scope": "source.filemaker"
   },
+  "Get(CurrentTime) [quick]": {
+    "prefix": "gtime",
+    "body": "Get ( CurrentTime )$0",
+    "description": "Get current time",
+    "scope": "source.filemaker"
+  },
   "Get(CurrentTimestamp)": {
     "prefix": "Get ( CurrentTimestamp )",
     "body": "Get ( CurrentTimestamp )",
     "description": "CurrentTimestamp",
+    "scope": "source.filemaker"
+  },
+  "Get(CurrentTimestamp) [quick]": {
+    "prefix": "gts",
+    "body": "Get ( CurrentTimestamp )$0",
+    "description": "Get current timestamp",
+    "scope": "source.filemaker"
+  },
+  "Get(CurrentTimeUTCMicroseconds) [quick]": {
+    "prefix": "gutcus",
+    "body": "Get ( CurrentTimeUTCMicroseconds )$0",
+    "description": "Get current time UTC microseconds",
     "scope": "source.filemaker"
   },
   "Get(CurrentTimeUTCMilliseconds)": {
@@ -582,10 +1044,22 @@
     "description": "CurrentTimeUTCMilliseconds",
     "scope": "source.filemaker"
   },
+  "Get(CurrentTimeUTCMilliseconds) [quick]": {
+    "prefix": "gutcms",
+    "body": "Get ( CurrentTimeUTCMilliseconds )$0",
+    "description": "Get current time UTC milliseconds",
+    "scope": "source.filemaker"
+  },
   "Get(CustomMenuSetName)": {
     "prefix": "Get ( CustomMenuSetName )",
     "body": "Get ( CustomMenuSetName )",
     "description": "CustomMenuSetName",
+    "scope": "source.filemaker"
+  },
+  "Get(CustomMenuSetName) [quick]": {
+    "prefix": "gmenu",
+    "body": "Get ( CustomMenuSetName )$0",
+    "description": "Get custom menu set name",
     "scope": "source.filemaker"
   },
   "Get(DesktopPath)": {
@@ -594,10 +1068,22 @@
     "description": "DesktopPath",
     "scope": "source.filemaker"
   },
+  "Get(DesktopPath) [quick]": {
+    "prefix": "gdesktop",
+    "body": "Get ( DesktopPath )$0",
+    "description": "Get desktop path",
+    "scope": "source.filemaker"
+  },
   "Get(Device)": {
     "prefix": "Get ( Device )",
     "body": "Get ( Device )",
     "description": "Device",
+    "scope": "source.filemaker"
+  },
+  "Get(Device) [quick]": {
+    "prefix": "gdevice",
+    "body": "Get ( Device )$0",
+    "description": "Get device type",
     "scope": "source.filemaker"
   },
   "Get(DocumentsPath)": {
@@ -606,10 +1092,22 @@
     "description": "DocumentsPath",
     "scope": "source.filemaker"
   },
+  "Get(DocumentsPath) [quick]": {
+    "prefix": "gdocs",
+    "body": "Get ( DocumentsPath )$0",
+    "description": "Get documents path",
+    "scope": "source.filemaker"
+  },
   "Get(DocumentsPathListing)": {
     "prefix": "Get ( DocumentsPathListing )",
     "body": "Get ( DocumentsPathListing )",
     "description": "DocumentsPathListing",
+    "scope": "source.filemaker"
+  },
+  "Get(DocumentsPathListing) [quick]": {
+    "prefix": "gdocslst",
+    "body": "Get ( DocumentsPathListing )$0",
+    "description": "Get documents path listing",
     "scope": "source.filemaker"
   },
   "Get(EncryptionState)": {
@@ -618,10 +1116,22 @@
     "description": "EncryptionState",
     "scope": "source.filemaker"
   },
+  "Get(EncryptionState) [quick]": {
+    "prefix": "gencrypt",
+    "body": "Get ( EncryptionState )$0",
+    "description": "Get encryption state",
+    "scope": "source.filemaker"
+  },
   "Get(ErrorCaptureState)": {
     "prefix": "Get ( ErrorCaptureState )",
     "body": "Get ( ErrorCaptureState )",
     "description": "ErrorCaptureState",
+    "scope": "source.filemaker"
+  },
+  "Get(ErrorCaptureState) [quick]": {
+    "prefix": "gerrcap",
+    "body": "Get ( ErrorCaptureState )$0",
+    "description": "Get error capture state",
     "scope": "source.filemaker"
   },
   "Get(FileAIModelIntegration)": {
@@ -630,10 +1140,22 @@
     "description": "Returns AI model integration info for the file. FM 2025+",
     "scope": "source.filemaker"
   },
+  "Get(FileAIModelIntegration) [quick]": {
+    "prefix": "gaifile",
+    "body": "Get ( FileAIModelIntegration )$0",
+    "description": "Get file AI model integration. FM 2025+",
+    "scope": "source.filemaker"
+  },
   "Get(FileLocaleElements)": {
     "prefix": "Get ( FileLocaleElements )",
     "body": "Get ( FileLocaleElements )",
     "description": "Returns a JSON object with information about the current file's locale.",
+    "scope": "source.filemaker"
+  },
+  "Get(FileLocaleElements) [quick]": {
+    "prefix": "gfilelocale",
+    "body": "Get ( FileLocaleElements )$0",
+    "description": "Get file locale elements",
     "scope": "source.filemaker"
   },
   "Get(FileMakerPath)": {
@@ -642,10 +1164,22 @@
     "description": "FileMakerPath",
     "scope": "source.filemaker"
   },
+  "Get(FileMakerPath) [quick]": {
+    "prefix": "gfmpath",
+    "body": "Get ( FileMakerPath )$0",
+    "description": "Get FileMaker path",
+    "scope": "source.filemaker"
+  },
   "Get(FileName)": {
     "prefix": "Get ( FileName )",
     "body": "Get ( FileName )",
     "description": "FileName",
+    "scope": "source.filemaker"
+  },
+  "Get(FileName) [quick]": {
+    "prefix": "gfile",
+    "body": "Get ( FileName )$0",
+    "description": "Get current file name",
     "scope": "source.filemaker"
   },
   "Get(FilePath)": {
@@ -654,10 +1188,22 @@
     "description": "FilePath",
     "scope": "source.filemaker"
   },
+  "Get(FilePath) [quick]": {
+    "prefix": "gpath",
+    "body": "Get ( FilePath )$0",
+    "description": "Get current file path",
+    "scope": "source.filemaker"
+  },
   "Get(FileSize)": {
     "prefix": "Get ( FileSize )",
     "body": "Get ( FileSize )",
     "description": "FileSize",
+    "scope": "source.filemaker"
+  },
+  "Get(FileSize) [quick]": {
+    "prefix": "gfilesize",
+    "body": "Get ( FileSize )$0",
+    "description": "Get file size",
     "scope": "source.filemaker"
   },
   "Get(FoundCount)": {
@@ -666,10 +1212,22 @@
     "description": "FoundCount",
     "scope": "source.filemaker"
   },
+  "Get(FoundCount) [quick]": {
+    "prefix": "gfound",
+    "body": "Get ( FoundCount )$0",
+    "description": "Get found count",
+    "scope": "source.filemaker"
+  },
   "Get(HighContrastState)": {
     "prefix": "Get ( HighContrastState )",
     "body": "Get ( HighContrastState )",
     "description": "HighContrastState",
+    "scope": "source.filemaker"
+  },
+  "Get(HighContrastState) [quick]": {
+    "prefix": "ghighcontrast",
+    "body": "Get ( HighContrastState )$0",
+    "description": "Get high contrast state",
     "scope": "source.filemaker"
   },
   "Get(HostApplicationVersion)": {
@@ -678,10 +1236,22 @@
     "description": "HostApplicationVersion",
     "scope": "source.filemaker"
   },
+  "Get(HostApplicationVersion) [quick]": {
+    "prefix": "ghostver",
+    "body": "Get ( HostApplicationVersion )$0",
+    "description": "Get host application version",
+    "scope": "source.filemaker"
+  },
   "Get(HostIPAddress)": {
     "prefix": "Get ( HostIPAddress )",
     "body": "Get ( HostIPAddress )",
     "description": "HostIPAddress",
+    "scope": "source.filemaker"
+  },
+  "Get(HostIPAddress) [quick]": {
+    "prefix": "ghostip",
+    "body": "Get ( HostIPAddress )$0",
+    "description": "Get host IP address",
     "scope": "source.filemaker"
   },
   "Get(HostName)": {
@@ -690,10 +1260,22 @@
     "description": "HostName",
     "scope": "source.filemaker"
   },
+  "Get(HostName) [quick]": {
+    "prefix": "ghostname",
+    "body": "Get ( HostName )$0",
+    "description": "Get host name",
+    "scope": "source.filemaker"
+  },
   "Get(InstalledFMPlugins)": {
     "prefix": "Get ( InstalledFMPlugins )",
     "body": "Get ( InstalledFMPlugins )",
     "description": "InstalledFMPlugins",
+    "scope": "source.filemaker"
+  },
+  "Get(InstalledFMPlugins) [quick]": {
+    "prefix": "gplugins",
+    "body": "Get ( InstalledFMPlugins )$0",
+    "description": "Get installed FM plugins",
     "scope": "source.filemaker"
   },
   "Get(InstalledFMPluginsAsJSON)": {
@@ -702,10 +1284,34 @@
     "description": "InstalledFMPluginsAsJSON",
     "scope": "source.filemaker"
   },
+  "Get(InstalledFMPluginsAsJSON) [quick]": {
+    "prefix": "gpluginjson",
+    "body": "Get ( InstalledFMPluginsAsJSON )$0",
+    "description": "Get installed FM plugins as JSON",
+    "scope": "source.filemaker"
+  },
   "Get(LastError)": {
     "prefix": "Get ( LastError )",
     "body": "Get ( LastError )",
     "description": "LastError",
+    "scope": "source.filemaker"
+  },
+  "Get(LastError) [quick]": {
+    "prefix": "gerr",
+    "body": "Get ( LastError )$0",
+    "description": "Get last error code",
+    "scope": "source.filemaker"
+  },
+  "Get(LastErrorDetail) [quick]": {
+    "prefix": "gerrd",
+    "body": "Get ( LastErrorDetail )$0",
+    "description": "Get last error detail",
+    "scope": "source.filemaker"
+  },
+  "Get(LastErrorLocation) [quick]": {
+    "prefix": "gerrloc",
+    "body": "Get ( LastErrorLocation )$0",
+    "description": "Get last error location",
     "scope": "source.filemaker"
   },
   "Get(LastExternalErrorDetail)": {
@@ -720,10 +1326,28 @@
     "description": "LastMessageChoice",
     "scope": "source.filemaker"
   },
+  "Get(LastMessageChoice) [quick]": {
+    "prefix": "gchoice",
+    "body": "Get ( LastMessageChoice )$0",
+    "description": "Get last dialog button choice",
+    "scope": "source.filemaker"
+  },
   "Get(LastODBCError)": {
     "prefix": "Get(LastODBCError)",
     "body": "Get ( LastODBCError )$0",
     "description": "Returns the last ODBC error code.",
+    "scope": "source.filemaker"
+  },
+  "Get(LastODBCError) [quick]": {
+    "prefix": "godbc",
+    "body": "Get ( LastODBCError )$0",
+    "description": "Get last ODBC error",
+    "scope": "source.filemaker"
+  },
+  "Get(LastStepTokensUsed) [quick]": {
+    "prefix": "gtokens",
+    "body": "Get ( LastStepTokensUsed )$0",
+    "description": "Get tokens used in last AI step. FM 2024+",
     "scope": "source.filemaker"
   },
   "Get(LayoutAccess)": {
@@ -732,10 +1356,22 @@
     "description": "LayoutAccess",
     "scope": "source.filemaker"
   },
+  "Get(LayoutAccess) [quick]": {
+    "prefix": "glaccess",
+    "body": "Get ( LayoutAccess )$0",
+    "description": "Get layout access",
+    "scope": "source.filemaker"
+  },
   "Get(LayoutCount)": {
     "prefix": "Get ( LayoutCount )",
     "body": "Get ( LayoutCount )",
     "description": "LayoutCount",
+    "scope": "source.filemaker"
+  },
+  "Get(LayoutCount) [quick]": {
+    "prefix": "glcount",
+    "body": "Get ( LayoutCount )$0",
+    "description": "Get layout count",
     "scope": "source.filemaker"
   },
   "Get(LayoutName)": {
@@ -744,10 +1380,22 @@
     "description": "LayoutName",
     "scope": "source.filemaker"
   },
+  "Get(LayoutName) [quick]": {
+    "prefix": "glayout",
+    "body": "Get ( LayoutName )$0",
+    "description": "Get current layout name",
+    "scope": "source.filemaker"
+  },
   "Get(LayoutNumber)": {
     "prefix": "Get ( LayoutNumber )",
     "body": "Get ( LayoutNumber )",
     "description": "LayoutNumber",
+    "scope": "source.filemaker"
+  },
+  "Get(LayoutNumber) [quick]": {
+    "prefix": "glnum",
+    "body": "Get ( LayoutNumber )$0",
+    "description": "Get layout number",
     "scope": "source.filemaker"
   },
   "Get(LayoutTableName)": {
@@ -756,10 +1404,22 @@
     "description": "LayoutTableName",
     "scope": "source.filemaker"
   },
+  "Get(LayoutTableName) [quick]": {
+    "prefix": "gltable",
+    "body": "Get ( LayoutTableName )$0",
+    "description": "Get layout table name",
+    "scope": "source.filemaker"
+  },
   "Get(LayoutViewState)": {
     "prefix": "Get ( LayoutViewState )",
     "body": "Get ( LayoutViewState )",
     "description": "LayoutViewState",
+    "scope": "source.filemaker"
+  },
+  "Get(LayoutViewState) [quick]": {
+    "prefix": "glview",
+    "body": "Get ( LayoutViewState )$0",
+    "description": "Get layout view state",
     "scope": "source.filemaker"
   },
   "Get(MenubarState)": {
@@ -768,10 +1428,22 @@
     "description": "MenubarState",
     "scope": "source.filemaker"
   },
+  "Get(MenubarState) [quick]": {
+    "prefix": "gmenubar",
+    "body": "Get ( MenubarState )$0",
+    "description": "Get menubar state",
+    "scope": "source.filemaker"
+  },
   "Get(ModifiedFields)": {
     "prefix": "Get ( ModifiedFields )",
     "body": "Get ( ModifiedFields )",
     "description": "ModifiedFields",
+    "scope": "source.filemaker"
+  },
+  "Get(ModifiedFields) [quick]": {
+    "prefix": "gmodfields",
+    "body": "Get ( ModifiedFields )$0",
+    "description": "Get modified fields",
     "scope": "source.filemaker"
   },
   "Get(MultiUserState)": {
@@ -780,10 +1452,22 @@
     "description": "MultiUserState",
     "scope": "source.filemaker"
   },
+  "Get(MultiUserState) [quick]": {
+    "prefix": "gmultiuser",
+    "body": "Get ( MultiUserState )$0",
+    "description": "Get multi user state",
+    "scope": "source.filemaker"
+  },
   "Get(NetworkProtocol)": {
     "prefix": "Get ( NetworkProtocol )",
     "body": "Get ( NetworkProtocol )",
     "description": "NetworkProtocol",
+    "scope": "source.filemaker"
+  },
+  "Get(NetworkProtocol) [quick]": {
+    "prefix": "gnetproto",
+    "body": "Get ( NetworkProtocol )$0",
+    "description": "Get network protocol",
     "scope": "source.filemaker"
   },
   "Get(NetworkType)": {
@@ -792,10 +1476,22 @@
     "description": "NetworkType",
     "scope": "source.filemaker"
   },
+  "Get(NetworkType) [quick]": {
+    "prefix": "gnettype",
+    "body": "Get ( NetworkType )$0",
+    "description": "Get network type",
+    "scope": "source.filemaker"
+  },
   "Get(OpenDataFileInfo)": {
     "prefix": "Get ( OpenDataFileInfo )",
     "body": "Get ( OpenDataFileInfo )",
     "description": "OpenDataFileInfo",
+    "scope": "source.filemaker"
+  },
+  "Get(OpenDataFileInfo) [quick]": {
+    "prefix": "gdatafile",
+    "body": "Get ( OpenDataFileInfo )$0",
+    "description": "Get open data file info",
     "scope": "source.filemaker"
   },
   "Get(PageCount)": {
@@ -804,10 +1500,22 @@
     "description": "PageCount",
     "scope": "source.filemaker"
   },
+  "Get(PageCount) [quick]": {
+    "prefix": "gpagecount",
+    "body": "Get ( PageCount )$0",
+    "description": "Get page count",
+    "scope": "source.filemaker"
+  },
   "Get(PageNumber)": {
     "prefix": "Get ( PageNumber )",
     "body": "Get ( PageNumber )",
     "description": "PageNumber",
+    "scope": "source.filemaker"
+  },
+  "Get(PageNumber) [quick]": {
+    "prefix": "gpagenum",
+    "body": "Get ( PageNumber )$0",
+    "description": "Get page number",
     "scope": "source.filemaker"
   },
   "Get(PersistentID)": {
@@ -816,10 +1524,22 @@
     "description": "PersistentID",
     "scope": "source.filemaker"
   },
+  "Get(PersistentID) [quick]": {
+    "prefix": "gpersistid",
+    "body": "Get ( PersistentID )$0",
+    "description": "Get persistent ID",
+    "scope": "source.filemaker"
+  },
   "Get(PreferencesPath)": {
     "prefix": "Get ( PreferencesPath )",
     "body": "Get ( PreferencesPath )",
     "description": "PreferencesPath",
+    "scope": "source.filemaker"
+  },
+  "Get(PreferencesPath) [quick]": {
+    "prefix": "gprefpath",
+    "body": "Get ( PreferencesPath )$0",
+    "description": "Get preferences path",
     "scope": "source.filemaker"
   },
   "Get(PrinterName)": {
@@ -828,10 +1548,22 @@
     "description": "PrinterName",
     "scope": "source.filemaker"
   },
+  "Get(PrinterName) [quick]": {
+    "prefix": "gprinter",
+    "body": "Get ( PrinterName )$0",
+    "description": "Get printer name",
+    "scope": "source.filemaker"
+  },
   "Get(QuickFindText)": {
     "prefix": "Get ( QuickFindText )",
     "body": "Get ( QuickFindText )",
     "description": "QuickFindText",
+    "scope": "source.filemaker"
+  },
+  "Get(QuickFindText) [quick]": {
+    "prefix": "gquickfind",
+    "body": "Get ( QuickFindText )$0",
+    "description": "Get quick find text",
     "scope": "source.filemaker"
   },
   "Get(RecordAccess)": {
@@ -840,10 +1572,22 @@
     "description": "RecordAccess",
     "scope": "source.filemaker"
   },
+  "Get(RecordAccess) [quick]": {
+    "prefix": "grecaccess",
+    "body": "Get ( RecordAccess )$0",
+    "description": "Get record access",
+    "scope": "source.filemaker"
+  },
   "Get(RecordID)": {
     "prefix": "Get ( RecordID )",
     "body": "Get ( RecordID )",
     "description": "RecordID",
+    "scope": "source.filemaker"
+  },
+  "Get(RecordID) [quick]": {
+    "prefix": "grid",
+    "body": "Get ( RecordID )$0",
+    "description": "Get current record ID",
     "scope": "source.filemaker"
   },
   "Get(RecordModificationCount)": {
@@ -852,10 +1596,22 @@
     "description": "RecordModificationCount",
     "scope": "source.filemaker"
   },
+  "Get(RecordModificationCount) [quick]": {
+    "prefix": "grecmod",
+    "body": "Get ( RecordModificationCount )$0",
+    "description": "Get record modification count",
+    "scope": "source.filemaker"
+  },
   "Get(RecordNumber)": {
     "prefix": "Get ( RecordNumber )",
     "body": "Get ( RecordNumber )",
     "description": "RecordNumber",
+    "scope": "source.filemaker"
+  },
+  "Get(RecordNumber) [quick]": {
+    "prefix": "grecnum",
+    "body": "Get ( RecordNumber )$0",
+    "description": "Get current record number",
     "scope": "source.filemaker"
   },
   "Get(RecordOpenCount)": {
@@ -864,10 +1620,22 @@
     "description": "RecordOpenCount",
     "scope": "source.filemaker"
   },
+  "Get(RecordOpenCount) [quick]": {
+    "prefix": "grecopenct",
+    "body": "Get ( RecordOpenCount )$0",
+    "description": "Get record open count",
+    "scope": "source.filemaker"
+  },
   "Get(RecordOpenState)": {
     "prefix": "Get ( RecordOpenState )",
     "body": "Get ( RecordOpenState )",
     "description": "RecordOpenState",
+    "scope": "source.filemaker"
+  },
+  "Get(RecordOpenState) [quick]": {
+    "prefix": "grecopenst",
+    "body": "Get ( RecordOpenState )$0",
+    "description": "Get record open state",
     "scope": "source.filemaker"
   },
   "Get(RegionMonitorEvents)": {
@@ -876,10 +1644,22 @@
     "description": "RegionMonitorEvents",
     "scope": "source.filemaker"
   },
+  "Get(RegionMonitorEvents) [quick]": {
+    "prefix": "gregion",
+    "body": "Get ( RegionMonitorEvents )$0",
+    "description": "Get region monitor events",
+    "scope": "source.filemaker"
+  },
   "Get(RequestCount)": {
     "prefix": "Get ( RequestCount )",
     "body": "Get ( RequestCount )",
     "description": "RequestCount",
+    "scope": "source.filemaker"
+  },
+  "Get(RequestCount) [quick]": {
+    "prefix": "greqcount",
+    "body": "Get ( RequestCount )$0",
+    "description": "Get request count",
     "scope": "source.filemaker"
   },
   "Get(RequestOmitState)": {
@@ -888,10 +1668,28 @@
     "description": "RequestOmitState",
     "scope": "source.filemaker"
   },
+  "Get(RequestOmitState) [quick]": {
+    "prefix": "greqomit",
+    "body": "Get ( RequestOmitState )$0",
+    "description": "Get request omit state",
+    "scope": "source.filemaker"
+  },
+  "Get(RevertTransactionOnErrorState) [quick]": {
+    "prefix": "grevert",
+    "body": "Get ( RevertTransactionOnErrorState )$0",
+    "description": "Get revert transaction on error state",
+    "scope": "source.filemaker"
+  },
   "Get(ScreenDepth)": {
     "prefix": "Get ( ScreenDepth )",
     "body": "Get ( ScreenDepth )",
     "description": "ScreenDepth",
+    "scope": "source.filemaker"
+  },
+  "Get(ScreenDepth) [quick]": {
+    "prefix": "gscrdepth",
+    "body": "Get ( ScreenDepth )$0",
+    "description": "Get screen depth",
     "scope": "source.filemaker"
   },
   "Get(ScreenHeight)": {
@@ -900,10 +1698,22 @@
     "description": "ScreenHeight",
     "scope": "source.filemaker"
   },
+  "Get(ScreenHeight) [quick]": {
+    "prefix": "gscrh",
+    "body": "Get ( ScreenHeight )$0",
+    "description": "Get screen height",
+    "scope": "source.filemaker"
+  },
   "Get(ScreenScaleFactor)": {
     "prefix": "Get ( ScreenScaleFactor )",
     "body": "Get ( ScreenScaleFactor )",
     "description": "ScreenScaleFactor",
+    "scope": "source.filemaker"
+  },
+  "Get(ScreenScaleFactor) [quick]": {
+    "prefix": "gscrscale",
+    "body": "Get ( ScreenScaleFactor )$0",
+    "description": "Get screen scale factor",
     "scope": "source.filemaker"
   },
   "Get(ScreenWidth)": {
@@ -912,10 +1722,22 @@
     "description": "ScreenWidth",
     "scope": "source.filemaker"
   },
+  "Get(ScreenWidth) [quick]": {
+    "prefix": "gscrw",
+    "body": "Get ( ScreenWidth )$0",
+    "description": "Get screen width",
+    "scope": "source.filemaker"
+  },
   "Get(ScriptAnimationState)": {
     "prefix": "Get ( ScriptAnimationState )",
     "body": "Get ( ScriptAnimationState )",
     "description": "ScriptAnimationState",
+    "scope": "source.filemaker"
+  },
+  "Get(ScriptAnimationState) [quick]": {
+    "prefix": "gscranim",
+    "body": "Get ( ScriptAnimationState )$0",
+    "description": "Get script animation state",
     "scope": "source.filemaker"
   },
   "Get(ScriptName)": {
@@ -924,10 +1746,22 @@
     "description": "ScriptName",
     "scope": "source.filemaker"
   },
+  "Get(ScriptName) [quick]": {
+    "prefix": "gscript",
+    "body": "Get ( ScriptName )$0",
+    "description": "Get current script name",
+    "scope": "source.filemaker"
+  },
   "Get(ScriptParameter)": {
     "prefix": "Get ( ScriptParameter )",
     "body": "Get ( ScriptParameter )",
     "description": "ScriptParameter",
+    "scope": "source.filemaker"
+  },
+  "Get(ScriptParameter) [quick]": {
+    "prefix": "gparam",
+    "body": "Get ( ScriptParameter )$0",
+    "description": "Get script parameter",
     "scope": "source.filemaker"
   },
   "Get(ScriptResult)": {
@@ -936,10 +1770,22 @@
     "description": "ScriptResult",
     "scope": "source.filemaker"
   },
+  "Get(ScriptResult) [quick]": {
+    "prefix": "gresult",
+    "body": "Get ( ScriptResult )$0",
+    "description": "Get script result",
+    "scope": "source.filemaker"
+  },
   "Get(SessionIdentifier)": {
     "prefix": "Get ( SessionIdentifier )",
     "body": "Get ( SessionIdentifier )",
     "description": "SessionIdentifier",
+    "scope": "source.filemaker"
+  },
+  "Get(SessionIdentifier) [quick]": {
+    "prefix": "gsession",
+    "body": "Get ( SessionIdentifier )$0",
+    "description": "Get session identifier",
     "scope": "source.filemaker"
   },
   "Get(SortState)": {
@@ -948,10 +1794,22 @@
     "description": "SortState",
     "scope": "source.filemaker"
   },
+  "Get(SortState) [quick]": {
+    "prefix": "gsort",
+    "body": "Get ( SortState )$0",
+    "description": "Get sort state",
+    "scope": "source.filemaker"
+  },
   "Get(StatusAreaState)": {
     "prefix": "Get ( StatusAreaState )",
     "body": "Get ( StatusAreaState )",
     "description": "StatusAreaState",
+    "scope": "source.filemaker"
+  },
+  "Get(StatusAreaState) [quick]": {
+    "prefix": "gstatus",
+    "body": "Get ( StatusAreaState )$0",
+    "description": "Get status area state",
     "scope": "source.filemaker"
   },
   "Get(SystemAppearance)": {
@@ -960,10 +1818,22 @@
     "description": "Returns the name of the current operating system appearance",
     "scope": "source.filemaker"
   },
+  "Get(SystemAppearance) [quick]": {
+    "prefix": "gsysappear",
+    "body": "Get ( SystemAppearance )$0",
+    "description": "Get system appearance",
+    "scope": "source.filemaker"
+  },
   "Get(SystemDrive)": {
     "prefix": "Get ( SystemDrive )",
     "body": "Get ( SystemDrive )",
     "description": "SystemDrive",
+    "scope": "source.filemaker"
+  },
+  "Get(SystemDrive) [quick]": {
+    "prefix": "gsysdrive",
+    "body": "Get ( SystemDrive )$0",
+    "description": "Get system drive",
     "scope": "source.filemaker"
   },
   "Get(SystemIPAddress)": {
@@ -972,10 +1842,22 @@
     "description": "SystemIPAddress",
     "scope": "source.filemaker"
   },
+  "Get(SystemIPAddress) [quick]": {
+    "prefix": "gsysip",
+    "body": "Get ( SystemIPAddress )$0",
+    "description": "Get system IP address",
+    "scope": "source.filemaker"
+  },
   "Get(SystemLanguage)": {
     "prefix": "Get ( SystemLanguage )",
     "body": "Get ( SystemLanguage )",
     "description": "SystemLanguage",
+    "scope": "source.filemaker"
+  },
+  "Get(SystemLanguage) [quick]": {
+    "prefix": "gsyslang",
+    "body": "Get ( SystemLanguage )$0",
+    "description": "Get system language",
     "scope": "source.filemaker"
   },
   "Get(SystemLocaleElements)": {
@@ -984,10 +1866,22 @@
     "description": "Returns a JSON object with information about the client system's locale.",
     "scope": "source.filemaker"
   },
+  "Get(SystemLocaleElements) [quick]": {
+    "prefix": "gsyslocale",
+    "body": "Get ( SystemLocaleElements )$0",
+    "description": "Get system locale elements",
+    "scope": "source.filemaker"
+  },
   "Get(SystemNICAddress)": {
     "prefix": "Get ( SystemNICAddress )",
     "body": "Get ( SystemNICAddress )",
     "description": "SystemNICAddress",
+    "scope": "source.filemaker"
+  },
+  "Get(SystemNICAddress) [quick]": {
+    "prefix": "gsysnic",
+    "body": "Get ( SystemNICAddress )$0",
+    "description": "Get system NIC address",
     "scope": "source.filemaker"
   },
   "Get(SystemPlatform)": {
@@ -996,10 +1890,28 @@
     "description": "SystemPlatform",
     "scope": "source.filemaker"
   },
+  "Get(SystemPlatform) [quick]": {
+    "prefix": "gplatform",
+    "body": "Get ( SystemPlatform )$0",
+    "description": "Get system platform",
+    "scope": "source.filemaker"
+  },
+  "Get(SystemStorageAvailable) [quick]": {
+    "prefix": "gsysstorage",
+    "body": "Get ( SystemStorageAvailable )$0",
+    "description": "Get system storage available",
+    "scope": "source.filemaker"
+  },
   "Get(SystemVersion)": {
     "prefix": "Get ( SystemVersion )",
     "body": "Get ( SystemVersion )",
     "description": "SystemVersion",
+    "scope": "source.filemaker"
+  },
+  "Get(SystemVersion) [quick]": {
+    "prefix": "gsysver",
+    "body": "Get ( SystemVersion )$0",
+    "description": "Get system version",
     "scope": "source.filemaker"
   },
   "Get(TemporaryPath)": {
@@ -1008,10 +1920,22 @@
     "description": "TemporaryPath",
     "scope": "source.filemaker"
   },
+  "Get(TemporaryPath) [quick]": {
+    "prefix": "gtemppath",
+    "body": "Get ( TemporaryPath )$0",
+    "description": "Get temporary path",
+    "scope": "source.filemaker"
+  },
   "Get(TextRulerVisible)": {
     "prefix": "Get ( TextRulerVisible )",
     "body": "Get ( TextRulerVisible )",
     "description": "TextRulerVisible",
+    "scope": "source.filemaker"
+  },
+  "Get(TextRulerVisible) [quick]": {
+    "prefix": "gtextruler",
+    "body": "Get ( TextRulerVisible )$0",
+    "description": "Get text ruler visible",
     "scope": "source.filemaker"
   },
   "Get(TotalRecordCount)": {
@@ -1020,10 +1944,22 @@
     "description": "TotalRecordCount",
     "scope": "source.filemaker"
   },
+  "Get(TotalRecordCount) [quick]": {
+    "prefix": "gtotal",
+    "body": "Get ( TotalRecordCount )$0",
+    "description": "Get total record count",
+    "scope": "source.filemaker"
+  },
   "Get(TouchKeyboardState)": {
     "prefix": "Get ( TouchKeyboardState )",
     "body": "Get ( TouchKeyboardState )",
     "description": "TouchKeyboardState",
+    "scope": "source.filemaker"
+  },
+  "Get(TouchKeyboardState) [quick]": {
+    "prefix": "gtouchkb",
+    "body": "Get ( TouchKeyboardState )$0",
+    "description": "Get touch keyboard state",
     "scope": "source.filemaker"
   },
   "Get(TransactionOpenState)": {
@@ -1032,10 +1968,22 @@
     "description": "Returns whether a transaction is currently open. FM 19.6+",
     "scope": "source.filemaker"
   },
+  "Get(TransactionOpenState) [quick]": {
+    "prefix": "gtrans",
+    "body": "Get ( TransactionOpenState )$0",
+    "description": "Get transaction open state. FM 19.6+",
+    "scope": "source.filemaker"
+  },
   "Get(TriggerCurrentPanel)": {
     "prefix": "Get ( TriggerCurrentPanel )",
     "body": "Get ( TriggerCurrentPanel )",
     "description": "TriggerCurrentPanel",
+    "scope": "source.filemaker"
+  },
+  "Get(TriggerCurrentPanel) [quick]": {
+    "prefix": "gtrigpanel",
+    "body": "Get ( TriggerCurrentPanel )$0",
+    "description": "Get trigger current panel",
     "scope": "source.filemaker"
   },
   "Get(TriggerExternalEvent)": {
@@ -1044,10 +1992,22 @@
     "description": "TriggerExternalEvent",
     "scope": "source.filemaker"
   },
+  "Get(TriggerExternalEvent) [quick]": {
+    "prefix": "gtrigext",
+    "body": "Get ( TriggerExternalEvent )$0",
+    "description": "Get trigger external event",
+    "scope": "source.filemaker"
+  },
   "Get(TriggerGestureInfo)": {
     "prefix": "Get ( TriggerGestureInfo )",
     "body": "Get ( TriggerGestureInfo )",
     "description": "TriggerGestureInfo",
+    "scope": "source.filemaker"
+  },
+  "Get(TriggerGestureInfo) [quick]": {
+    "prefix": "gtriggest",
+    "body": "Get ( TriggerGestureInfo )$0",
+    "description": "Get trigger gesture info",
     "scope": "source.filemaker"
   },
   "Get(TriggerKeystroke)": {
@@ -1056,16 +2016,34 @@
     "description": "TriggerKeystroke",
     "scope": "source.filemaker"
   },
+  "Get(TriggerKeystroke) [quick]": {
+    "prefix": "gtrigkey",
+    "body": "Get ( TriggerKeystroke )$0",
+    "description": "Get trigger keystroke",
+    "scope": "source.filemaker"
+  },
   "Get(TriggerModifierKeys)": {
     "prefix": "Get ( TriggerModifierKeys )",
     "body": "Get ( TriggerModifierKeys )",
     "description": "TriggerModifierKeys",
     "scope": "source.filemaker"
   },
+  "Get(TriggerModifierKeys) [quick]": {
+    "prefix": "gtrigmod",
+    "body": "Get ( TriggerModifierKeys )$0",
+    "description": "Get trigger modifier keys",
+    "scope": "source.filemaker"
+  },
   "Get(TriggerTargetPanel)": {
     "prefix": "Get ( TriggerTargetPanel )",
     "body": "Get ( TriggerTargetPanel )",
     "description": "TriggerTargetPanel",
+    "scope": "source.filemaker"
+  },
+  "Get(TriggerTargetPanel) [quick]": {
+    "prefix": "gtrigtarget",
+    "body": "Get ( TriggerTargetPanel )$0",
+    "description": "Get trigger target panel",
     "scope": "source.filemaker"
   },
   "Get(UserCount)": {
@@ -1092,10 +2070,22 @@
     "description": "UUID",
     "scope": "source.filemaker"
   },
+  "Get(UUID) [quick]": {
+    "prefix": "guuid",
+    "body": "Get ( UUID )$0",
+    "description": "Get UUID",
+    "scope": "source.filemaker"
+  },
   "Get(UUIDNumber)": {
     "prefix": "Get ( UUIDNumber )",
     "body": "Get ( UUIDNumber )",
     "description": "UUIDNumber",
+    "scope": "source.filemaker"
+  },
+  "Get(UUIDNumber) [quick]": {
+    "prefix": "guuidnum",
+    "body": "Get ( UUIDNumber )$0",
+    "description": "Get UUID number",
     "scope": "source.filemaker"
   },
   "Get(WindowContentHeight)": {
@@ -1104,10 +2094,22 @@
     "description": "WindowContentHeight",
     "scope": "source.filemaker"
   },
+  "Get(WindowContentHeight) [quick]": {
+    "prefix": "gwch",
+    "body": "Get ( WindowContentHeight )$0",
+    "description": "Get window content height",
+    "scope": "source.filemaker"
+  },
   "Get(WindowContentWidth)": {
     "prefix": "Get ( WindowContentWidth )",
     "body": "Get ( WindowContentWidth )",
     "description": "WindowContentWidth",
+    "scope": "source.filemaker"
+  },
+  "Get(WindowContentWidth) [quick]": {
+    "prefix": "gwcw",
+    "body": "Get ( WindowContentWidth )$0",
+    "description": "Get window content width",
     "scope": "source.filemaker"
   },
   "Get(WindowDesktopHeight)": {
@@ -1116,10 +2118,22 @@
     "description": "WindowDesktopHeight",
     "scope": "source.filemaker"
   },
+  "Get(WindowDesktopHeight) [quick]": {
+    "prefix": "gwdh",
+    "body": "Get ( WindowDesktopHeight )$0",
+    "description": "Get window desktop height",
+    "scope": "source.filemaker"
+  },
   "Get(WindowDesktopWidth)": {
     "prefix": "Get ( WindowDesktopWidth )",
     "body": "Get ( WindowDesktopWidth )",
     "description": "WindowDesktopWidth",
+    "scope": "source.filemaker"
+  },
+  "Get(WindowDesktopWidth) [quick]": {
+    "prefix": "gwdw",
+    "body": "Get ( WindowDesktopWidth )$0",
+    "description": "Get window desktop width",
     "scope": "source.filemaker"
   },
   "Get(WindowHeight)": {
@@ -1128,10 +2142,22 @@
     "description": "WindowHeight",
     "scope": "source.filemaker"
   },
+  "Get(WindowHeight) [quick]": {
+    "prefix": "gwh",
+    "body": "Get ( WindowHeight )$0",
+    "description": "Get window height",
+    "scope": "source.filemaker"
+  },
   "Get(WindowLeft)": {
     "prefix": "Get ( WindowLeft )",
     "body": "Get ( WindowLeft )",
     "description": "WindowLeft",
+    "scope": "source.filemaker"
+  },
+  "Get(WindowLeft) [quick]": {
+    "prefix": "gwleft",
+    "body": "Get ( WindowLeft )$0",
+    "description": "Get window left",
     "scope": "source.filemaker"
   },
   "Get(WindowMode)": {
@@ -1140,10 +2166,22 @@
     "description": "WindowMode",
     "scope": "source.filemaker"
   },
+  "Get(WindowMode) [quick]": {
+    "prefix": "gwmode",
+    "body": "Get ( WindowMode )$0",
+    "description": "Get window mode",
+    "scope": "source.filemaker"
+  },
   "Get(WindowName)": {
     "prefix": "Get ( WindowName )",
     "body": "Get ( WindowName )",
     "description": "WindowName",
+    "scope": "source.filemaker"
+  },
+  "Get(WindowName) [quick]": {
+    "prefix": "gwname",
+    "body": "Get ( WindowName )$0",
+    "description": "Get window name",
     "scope": "source.filemaker"
   },
   "Get(WindowOrientation)": {
@@ -1152,10 +2190,22 @@
     "description": "WindowOrientation",
     "scope": "source.filemaker"
   },
+  "Get(WindowOrientation) [quick]": {
+    "prefix": "gworient",
+    "body": "Get ( WindowOrientation )$0",
+    "description": "Get window orientation",
+    "scope": "source.filemaker"
+  },
   "Get(WindowStyle)": {
     "prefix": "Get ( WindowStyle )",
     "body": "Get ( WindowStyle )",
     "description": "WindowStyle",
+    "scope": "source.filemaker"
+  },
+  "Get(WindowStyle) [quick]": {
+    "prefix": "gwstyle",
+    "body": "Get ( WindowStyle )$0",
+    "description": "Get window style",
     "scope": "source.filemaker"
   },
   "Get(WindowTop)": {
@@ -1164,10 +2214,22 @@
     "description": "WindowTop",
     "scope": "source.filemaker"
   },
+  "Get(WindowTop) [quick]": {
+    "prefix": "gwtop",
+    "body": "Get ( WindowTop )$0",
+    "description": "Get window top",
+    "scope": "source.filemaker"
+  },
   "Get(WindowVisible)": {
     "prefix": "Get ( WindowVisible )",
     "body": "Get ( WindowVisible )",
     "description": "WindowVisible",
+    "scope": "source.filemaker"
+  },
+  "Get(WindowVisible) [quick]": {
+    "prefix": "gwvisible",
+    "body": "Get ( WindowVisible )$0",
+    "description": "Get window visible",
     "scope": "source.filemaker"
   },
   "Get(WindowWidth)": {
@@ -1176,10 +2238,22 @@
     "description": "WindowWidth",
     "scope": "source.filemaker"
   },
+  "Get(WindowWidth) [quick]": {
+    "prefix": "gwwidth",
+    "body": "Get ( WindowWidth )$0",
+    "description": "Get window width",
+    "scope": "source.filemaker"
+  },
   "Get(WindowZoomLevel)": {
     "prefix": "Get ( WindowZoomLevel )",
     "body": "Get ( WindowZoomLevel )",
     "description": "WindowZoomLevel",
+    "scope": "source.filemaker"
+  },
+  "Get(WindowZoomLevel) [quick]": {
+    "prefix": "gwzoom",
+    "body": "Get ( WindowZoomLevel )$0",
+    "description": "Get window zoom level",
     "scope": "source.filemaker"
   },
   "GetAddonInfo": {
@@ -1415,6 +2489,66 @@
     "description": "GetWidth",
     "scope": "source.filemaker"
   },
+  "Go to Field [ss]": {
+    "prefix": "ssgotof",
+    "body": "Go to Field [ ${1:Table::Field} ]$0",
+    "description": "Go to Field",
+    "scope": "source.filemaker"
+  },
+  "Go to Layout [ss]": {
+    "prefix": "ssgol",
+    "body": "Go to Layout [ \"${1:LayoutName}\" (${2:TableName}) ]$0",
+    "description": "Go to Layout",
+    "scope": "source.filemaker"
+  },
+  "Go to List of Records [ss]": {
+    "prefix": "ssgolr",
+    "body": "Go to List of Records [ ${1:recordIDs} ]$0",
+    "description": "Go to List of Records. FM 2025+",
+    "scope": "source.filemaker"
+  },
+  "Go to Next Field [ss]": {
+    "prefix": "ssnextf",
+    "body": "Go to Next Field$0",
+    "description": "Go to Next Field",
+    "scope": "source.filemaker"
+  },
+  "Go to Object [ss]": {
+    "prefix": "ssgoo",
+    "body": "Go to Object [ Object Name: \"${1:objectName}\" ]$0",
+    "description": "Go to Object",
+    "scope": "source.filemaker"
+  },
+  "Go to Portal Row [ss]": {
+    "prefix": "ssgoprow",
+    "body": "Go to Portal Row [ ${1:Select}; ${2:Last} ]$0",
+    "description": "Go to Portal Row",
+    "scope": "source.filemaker"
+  },
+  "Go to Previous Field [ss]": {
+    "prefix": "ssprevf",
+    "body": "Go to Previous Field$0",
+    "description": "Go to Previous Field",
+    "scope": "source.filemaker"
+  },
+  "Go to Record/Request/Page [ss]": {
+    "prefix": "ssgorec",
+    "body": "Go to Record/Request/Page [ ${1:First} ]$0",
+    "description": "Go to Record/Request/Page",
+    "scope": "source.filemaker"
+  },
+  "Go to Related Record [ss]": {
+    "prefix": "ssgorr",
+    "body": "Go to Related Record [\n\tFrom table: \"${1:RelatedTable}\";\n\tUsing layout: \"${2:LayoutName}\" (${3:TableName});\n\tShow only related records\n]$0",
+    "description": "Go to Related Record",
+    "scope": "source.filemaker"
+  },
+  "Halt Script [ss]": {
+    "prefix": "sshalt",
+    "body": "Halt Script$0",
+    "description": "Halt Script",
+    "scope": "source.filemaker"
+  },
   "HexDecode": {
     "prefix": "HexDecode",
     "body": "HexDecode ( ${1:date} ; ${2:fileNameWithExtension} )",
@@ -1479,6 +2613,84 @@
     "prefix": "iferr",
     "body": "If [ Get ( LastError ) \u2260 0 ]\n\t# Handle error\n\tSet Variable [ \\$error; Value: Get ( LastError ) ]\n\t$0\nEnd If",
     "description": "If block for error handling",
+    "scope": "source.filemaker"
+  },
+  "Import Records [ss]": {
+    "prefix": "ssimport",
+    "body": "Import Records [ With dialog: Off;\n\t\"${1:filename}\";\n\tAdd new records\n]$0",
+    "description": "Import Records",
+    "scope": "source.filemaker"
+  },
+  "Insert Calculated Result [ss]": {
+    "prefix": "ssinsertcalc",
+    "body": "Insert Calculated Result [ ${1:Table::Field}; ${2:calculation} ]$0",
+    "description": "Insert Calculated Result",
+    "scope": "source.filemaker"
+  },
+  "Insert Current Date [ss]": {
+    "prefix": "ssinsertdate",
+    "body": "Insert Current Date [ ${1:Select} ]$0",
+    "description": "Insert Current Date",
+    "scope": "source.filemaker"
+  },
+  "Insert Current Time [ss]": {
+    "prefix": "ssinserttime",
+    "body": "Insert Current Time [ ${1:Select} ]$0",
+    "description": "Insert Current Time",
+    "scope": "source.filemaker"
+  },
+  "Insert Current User Name [ss]": {
+    "prefix": "ssinsertuser",
+    "body": "Insert Current User Name [ ${1:Select} ]$0",
+    "description": "Insert Current User Name",
+    "scope": "source.filemaker"
+  },
+  "Insert Embedding [ss]": {
+    "prefix": "ssembedding",
+    "body": "Insert Embedding [\n\tModel: \"${1:myAI}\";\n\tSource Field: ${2:Table::SourceField};\n\tTarget Field: ${3:Table::EmbeddingField}\n]$0",
+    "description": "Insert Embedding. FM 2024+",
+    "scope": "source.filemaker"
+  },
+  "Insert Embedding in Found Set [ss]": {
+    "prefix": "ssembeddingfs",
+    "body": "Insert Embedding in Found Set [\n\tModel: \"${1:myAI}\";\n\tSource Field: ${2:Table::SourceField};\n\tTarget Field: ${3:Table::EmbeddingField}\n]$0",
+    "description": "Insert Embedding in Found Set. FM 2024+",
+    "scope": "source.filemaker"
+  },
+  "Insert File [ss]": {
+    "prefix": "ssinsertfile",
+    "body": "Insert File [ ${1:Embed}; \"${2:filename}\" ]$0",
+    "description": "Insert File",
+    "scope": "source.filemaker"
+  },
+  "Insert from URL [ss]": {
+    "prefix": "ssinserturl",
+    "body": "Insert from URL [\n\tWith dialog: Off;\n\tTarget: ${1:Table::Field};\n\t\"${2:https://}\"\n]$0",
+    "description": "Insert from URL",
+    "scope": "source.filemaker"
+  },
+  "Insert Picture [ss]": {
+    "prefix": "ssinsertpic",
+    "body": "Insert Picture [ ${1:Embed}; \"${2:filename}\" ]$0",
+    "description": "Insert Picture",
+    "scope": "source.filemaker"
+  },
+  "Insert Text [ss]": {
+    "prefix": "ssinserttext",
+    "body": "Insert Text [ ${1:Table::Field}; \"${2:text}\" ]$0",
+    "description": "Insert Text",
+    "scope": "source.filemaker"
+  },
+  "Install Menu Set [ss]": {
+    "prefix": "ssmenuinstall",
+    "body": "Install Menu Set [ \"${1:MenuSetName}\" ]$0",
+    "description": "Install Menu Set",
+    "scope": "source.filemaker"
+  },
+  "Install OnTimer Script [ss]": {
+    "prefix": "sstimer",
+    "body": "Install OnTimer Script [ \"${1:ScriptName}\"; Interval: ${2:60} ]$0",
+    "description": "Install OnTimer Script",
     "scope": "source.filemaker"
   },
   "Int": {
@@ -1794,6 +3006,12 @@
     "description": "Mod",
     "scope": "source.filemaker"
   },
+  "Modify Last Find [ss]": {
+    "prefix": "ssmodifyfind",
+    "body": "Modify Last Find$0",
+    "description": "Modify Last Find",
+    "scope": "source.filemaker"
+  },
   "Month": {
     "prefix": "Month",
     "body": "Month ( ${1:date} )$0",
@@ -1810,6 +3028,30 @@
     "prefix": "MonthNameJ",
     "body": "MonthNameJ ( ${1:date} )$0",
     "description": "MonthNameJ",
+    "scope": "source.filemaker"
+  },
+  "Move/Resize Window [ss]": {
+    "prefix": "ssmovewin",
+    "body": "Move/Resize Window [\n\tCurrent Window;\n\tHeight: ${1:600}; Width: ${2:800};\n\tTop: ${3:100}; Left: ${4:100}\n]$0",
+    "description": "Move/Resize Window",
+    "scope": "source.filemaker"
+  },
+  "New File [ss]": {
+    "prefix": "ssnewf",
+    "body": "New File$0",
+    "description": "New File",
+    "scope": "source.filemaker"
+  },
+  "New Record/Request [ss]": {
+    "prefix": "ssnewrec",
+    "body": "New Record/Request$0",
+    "description": "New Record/Request",
+    "scope": "source.filemaker"
+  },
+  "New Window [ss]": {
+    "prefix": "ssnewwin",
+    "body": "New Window [\n\tStyle: Document;\n\tName: \"${1:WindowName}\";\n\tUsing layout: \"${2:LayoutName}\" (${3:TableName})\n]$0",
+    "description": "New Window",
     "scope": "source.filemaker"
   },
   "NormalizeEmbedding": {
@@ -1830,16 +3072,130 @@
     "description": "NumToJText",
     "scope": "source.filemaker"
   },
+  "Omit Multiple Records [ss]": {
+    "prefix": "ssomitmulti",
+    "body": "Omit Multiple Records [ With dialog: Off; Current Record; ${1:1} ]$0",
+    "description": "Omit Multiple Records",
+    "scope": "source.filemaker"
+  },
+  "Omit Record [ss]": {
+    "prefix": "ssomit",
+    "body": "Omit Record$0",
+    "description": "Omit Record",
+    "scope": "source.filemaker"
+  },
+  "Open File [ss]": {
+    "prefix": "ssopenf",
+    "body": "Open File [ \"${1:filename}\" ]$0",
+    "description": "Open File",
+    "scope": "source.filemaker"
+  },
+  "Open Record/Request [ss]": {
+    "prefix": "ssopenrec",
+    "body": "Open Record/Request$0",
+    "description": "Open Record/Request",
+    "scope": "source.filemaker"
+  },
+  "Open Transaction [ss]": {
+    "prefix": "ssopentx",
+    "body": "Open Transaction$0",
+    "description": "Open Transaction script step",
+    "scope": "source.filemaker"
+  },
+  "Open URL [ss]": {
+    "prefix": "ssopenurl",
+    "body": "Open URL [ \"${1:https://}\" ]$0",
+    "description": "Open URL",
+    "scope": "source.filemaker"
+  },
+  "Paste [ss]": {
+    "prefix": "sspaste",
+    "body": "Paste [ ${1:Select}; No style ]$0",
+    "description": "Paste",
+    "scope": "source.filemaker"
+  },
   "PatternCount": {
     "prefix": "PatternCount",
     "body": "PatternCount ( ${1:text} ; ${2:searchString} )$0",
     "description": "PatternCount",
     "scope": "source.filemaker"
   },
+  "Pause/Resume Script [ss]": {
+    "prefix": "sspause",
+    "body": "Pause/Resume Script [ Duration (seconds): ${1:0} ]$0",
+    "description": "Pause/Resume Script",
+    "scope": "source.filemaker"
+  },
+  "Perform AppleScript [ss]": {
+    "prefix": "ssapplescript",
+    "body": "Perform AppleScript [ \"${1:tell application \\\"Finder\\\" to beep}\" ]$0",
+    "description": "Perform AppleScript (macOS)",
+    "scope": "source.filemaker"
+  },
+  "Perform Find [ss]": {
+    "prefix": "sspf",
+    "body": "Set Error Capture [ On ]\nPerform Find [ Restore ]\nIf [ Get ( LastError ) = 401 ]\n\t# No records found\n\t$0\nEnd If",
+    "description": "Perform Find with error handling",
+    "scope": "source.filemaker"
+  },
+  "Perform Find by Natural Language [ss]": {
+    "prefix": "ssnlfind",
+    "body": "Perform Find by Natural Language [\n\tModel: \"${1:myAI}\";\n\tPrompt: \"${2:prompt}\"\n]$0",
+    "description": "Perform Find by Natural Language. FM 2024+",
+    "scope": "source.filemaker"
+  },
+  "Perform Find/Replace [ss]": {
+    "prefix": "ssfindreplace",
+    "body": "Perform Find/Replace [ With dialog: Off; Find: \"${1:find}\"; Replace: \"${2:replace}\" ]$0",
+    "description": "Perform Find/Replace",
+    "scope": "source.filemaker"
+  },
+  "Perform JavaScript in Web Viewer [ss]": {
+    "prefix": "ssjs",
+    "body": "Perform JavaScript in Web Viewer [\n\tObject Name: \"${1:webViewerName}\";\n\tFunction Name: \"${2:functionName}\";\n\tParameters: ${3:param1}\n]$0",
+    "description": "Perform JavaScript in Web Viewer",
+    "scope": "source.filemaker"
+  },
+  "Perform Quick Find [ss]": {
+    "prefix": "ssqfind",
+    "body": "Perform Quick Find [ ${1:searchText} ]$0",
+    "description": "Perform Quick Find",
+    "scope": "source.filemaker"
+  },
+  "Perform RAG Action [ss]": {
+    "prefix": "ssrag",
+    "body": "Perform RAG Action [\n\tRAG Account: \"${1:myRAG}\";\n\tAction: ${2:Query};\n\tPrompt: \"${3:prompt}\";\n\tTarget: ${4:Table::Field}\n]$0",
+    "description": "Perform RAG Action. FM 2025+",
+    "scope": "source.filemaker"
+  },
   "Perform Script [block]": {
     "prefix": "ps",
     "body": "Perform Script [ \"${1:ScriptName}\"; Parameter: ${2:parameter} ]$0",
     "description": "Perform Script with parameter",
+    "scope": "source.filemaker"
+  },
+  "Perform Script [ss]": {
+    "prefix": "ssps",
+    "body": "Perform Script [ \"${1:ScriptName}\"; Parameter: ${2:\"\"} ]$0",
+    "description": "Perform Script",
+    "scope": "source.filemaker"
+  },
+  "Perform Script On Server [ss]": {
+    "prefix": "sspos",
+    "body": "Perform Script On Server [ \"${1:ScriptName}\"; Parameter: ${2:\"\"} ]$0",
+    "description": "Perform Script On Server",
+    "scope": "source.filemaker"
+  },
+  "Perform Semantic Find [ss]": {
+    "prefix": "sssemfind",
+    "body": "Perform Semantic Find [\n\tModel: \"${1:myAI}\";\n\tSource Field: ${2:Table::EmbeddingField};\n\tPrompt: \"${3:prompt}\"\n]$0",
+    "description": "Perform Semantic Find. FM 2024+",
+    "scope": "source.filemaker"
+  },
+  "Perform SQL Query by Natural Language [ss]": {
+    "prefix": "ssnlsql",
+    "body": "Perform SQL Query by Natural Language [\n\tModel: \"${1:myAI}\";\n\tPrompt: \"${2:prompt}\";\n\tTarget: ${3:Table::Field}\n]$0",
+    "description": "Perform SQL Query by Natural Language. FM 2024+",
     "scope": "source.filemaker"
   },
   "Pi": {
@@ -1864,6 +3220,18 @@
     "prefix": "PredictFromModel",
     "body": "PredictFromModel ( ${1:modelName} ; ${2:embedding} )$0",
     "description": "Returns predicted value from a trained regression model. FM 2024+",
+    "scope": "source.filemaker"
+  },
+  "Print [ss]": {
+    "prefix": "ssprint",
+    "body": "Print [ With dialog: Off ]$0",
+    "description": "Print",
+    "scope": "source.filemaker"
+  },
+  "Print Setup [ss]": {
+    "prefix": "ssprintsetup",
+    "body": "Print Setup [ With dialog: Off ]$0",
+    "description": "Print Setup",
     "scope": "source.filemaker"
   },
   "Proper": {
@@ -1902,10 +3270,46 @@
     "description": "",
     "scope": "source.filemaker"
   },
+  "Re-Login [ss]": {
+    "prefix": "ssrelogin",
+    "body": "Re-Login [ With dialog: Off;\n\tAccount Name: ${1:accountName};\n\tPassword: ${2:password}\n]$0",
+    "description": "Re-Login",
+    "scope": "source.filemaker"
+  },
+  "Read from Data File [ss]": {
+    "prefix": "ssread",
+    "body": "Read from Data File [\n\tFile ID: ${1:fileID};\n\tAmount: ${2:100};\n\tData Type: UTF-16;\n\tTarget: ${3:Table::Field}\n]$0",
+    "description": "Read from Data File",
+    "scope": "source.filemaker"
+  },
   "ReadQRCode": {
     "prefix": "ReadQRCode",
     "body": "ReadQRCode ( ${1:container} )$0",
     "description": "",
+    "scope": "source.filemaker"
+  },
+  "Recover File [ss]": {
+    "prefix": "ssrecover",
+    "body": "Recover File [ With dialog: Off; \"${1:filename}\" ]$0",
+    "description": "Recover File",
+    "scope": "source.filemaker"
+  },
+  "Refresh Object [ss]": {
+    "prefix": "ssrefreshobj",
+    "body": "Refresh Object [ Object Name: \"${1:objectName}\" ]$0",
+    "description": "Refresh Object",
+    "scope": "source.filemaker"
+  },
+  "Refresh Portal [ss]": {
+    "prefix": "ssrefreshportal",
+    "body": "Refresh Portal [ Object Name: \"${1:portalName}\" ]$0",
+    "description": "Refresh Portal",
+    "scope": "source.filemaker"
+  },
+  "Refresh Window [ss]": {
+    "prefix": "ssrefresh",
+    "body": "Refresh Window [ Flush cached join results ]$0",
+    "description": "Refresh Window",
     "scope": "source.filemaker"
   },
   "RelationInfo": {
@@ -1914,10 +3318,46 @@
     "description": "RelationInfo",
     "scope": "source.filemaker"
   },
+  "Relookup Field Contents [ss]": {
+    "prefix": "ssrelookup",
+    "body": "Relookup Field Contents [ With dialog: Off; ${1:Table::Field} ]$0",
+    "description": "Relookup Field Contents",
+    "scope": "source.filemaker"
+  },
+  "Rename File [ss]": {
+    "prefix": "ssrenamef",
+    "body": "Rename File [ \"${1:oldName}\"; \"${2:newName}\" ]$0",
+    "description": "Rename File",
+    "scope": "source.filemaker"
+  },
   "Replace": {
     "prefix": "Replace",
     "body": "Replace ( ${1:text} ; ${2:start} ; ${3:numberOfCharacters} ; ${4:replacementText} )$0",
     "description": "Replace",
+    "scope": "source.filemaker"
+  },
+  "Replace Field Contents [ss]": {
+    "prefix": "ssreplace",
+    "body": "Replace Field Contents [ With dialog: Off; ${1:Table::Field};\n\tReplace with calculated result: ${2:calculation}\n]$0",
+    "description": "Replace Field Contents",
+    "scope": "source.filemaker"
+  },
+  "Reset Account Password [ss]": {
+    "prefix": "ssresetpw",
+    "body": "Reset Account Password [ With dialog: Off;\n\tAccount Name: ${1:accountName};\n\tNew Password: ${2:newPwd}\n]$0",
+    "description": "Reset Account Password",
+    "scope": "source.filemaker"
+  },
+  "Revert Record/Request [ss]": {
+    "prefix": "ssrevert",
+    "body": "Revert Record/Request [ With dialog: Off ]$0",
+    "description": "Revert Record/Request",
+    "scope": "source.filemaker"
+  },
+  "Revert Transaction [ss]": {
+    "prefix": "ssreverttx",
+    "body": "Revert Transaction$0",
+    "description": "Revert Transaction",
     "scope": "source.filemaker"
   },
   "RGB": {
@@ -1962,6 +3402,30 @@
     "description": "Round",
     "scope": "source.filemaker"
   },
+  "Save a Copy as [ss]": {
+    "prefix": "sssavecopy",
+    "body": "Save a Copy as [ File Name: \"${1:backup.fmp12}\"; Type: compacted copy ]$0",
+    "description": "Save a Copy as",
+    "scope": "source.filemaker"
+  },
+  "Save Records as Excel [ss]": {
+    "prefix": "sssavexls",
+    "body": "Save Records as Excel [ With dialog: Off;\n\t\"${1:filename.xlsx}\"\n]$0",
+    "description": "Save Records as Excel",
+    "scope": "source.filemaker"
+  },
+  "Save Records as JSONL [ss]": {
+    "prefix": "sssavejsonl",
+    "body": "Save Records as JSONL [ With dialog: Off;\n\t\"${1:filename.jsonl}\"\n]$0",
+    "description": "Save Records as JSONL. FM 2024+",
+    "scope": "source.filemaker"
+  },
+  "Save Records as PDF [ss]": {
+    "prefix": "sssavepdf",
+    "body": "Save Records as PDF [ With dialog: Off;\n\t\"${1:filename.pdf}\"\n]$0",
+    "description": "Save Records as PDF",
+    "scope": "source.filemaker"
+  },
   "ScriptIDs": {
     "prefix": "ScriptIDs",
     "body": "ScriptIDs ( ${1:Get ( FileName )} )$0",
@@ -1974,10 +3438,28 @@
     "description": "ScriptNames",
     "scope": "source.filemaker"
   },
+  "Scroll Window [ss]": {
+    "prefix": "ssscroll",
+    "body": "Scroll Window [ ${1:Home} ]$0",
+    "description": "Scroll Window",
+    "scope": "source.filemaker"
+  },
   "Seconds": {
     "prefix": "Seconds",
     "body": "Seconds ( ${1:time} )$0",
     "description": "Seconds",
+    "scope": "source.filemaker"
+  },
+  "Select All [ss]": {
+    "prefix": "ssselectall",
+    "body": "Select All$0",
+    "description": "Select All",
+    "scope": "source.filemaker"
+  },
+  "Select Window [ss]": {
+    "prefix": "ssselectwin",
+    "body": "Select Window [ Name: \"${1:WindowName}\" ]$0",
+    "description": "Select Window",
     "scope": "source.filemaker"
   },
   "Self": {
@@ -1986,16 +3468,88 @@
     "description": "",
     "scope": "source.filemaker"
   },
+  "Send Mail [ss]": {
+    "prefix": "sssendmail",
+    "body": "Send Mail [\n\tTo: \"${1:recipient@email.com}\";\n\tSubject: \"${2:Subject}\";\n\tMessage: \"${3:Message}\"\n]$0",
+    "description": "Send Mail",
+    "scope": "source.filemaker"
+  },
   "SerialIncrement": {
     "prefix": "SerialIncrement",
     "body": "SerialIncrement ( ${1:text} ; ${2:incrementBy} )$0",
     "description": "SerialIncrement",
     "scope": "source.filemaker"
   },
+  "Set AI Call Logging [ss]": {
+    "prefix": "ssailog",
+    "body": "Set AI Call Logging [ ${1:On} ]$0",
+    "description": "Set AI Call Logging. FM 2024+",
+    "scope": "source.filemaker"
+  },
+  "Set Error Capture [ss]": {
+    "prefix": "sserrcap",
+    "body": "Set Error Capture [ ${1:On} ]$0",
+    "description": "Set Error Capture",
+    "scope": "source.filemaker"
+  },
+  "Set Error Logging [ss]": {
+    "prefix": "sserrlog",
+    "body": "Set Error Logging [ ${1:On} ]$0",
+    "description": "Set Error Logging",
+    "scope": "source.filemaker"
+  },
+  "Set Field [ss]": {
+    "prefix": "sssetf",
+    "body": "Set Field [ ${1:Table::Field}; ${2:value} ]$0",
+    "description": "Set Field",
+    "scope": "source.filemaker"
+  },
+  "Set Field By Name [ss]": {
+    "prefix": "sssetfbyname",
+    "body": "Set Field By Name [ ${1:fieldName}; ${2:value} ]$0",
+    "description": "Set Field By Name",
+    "scope": "source.filemaker"
+  },
+  "Set Next Serial Value [ss]": {
+    "prefix": "ssnextserial",
+    "body": "Set Next Serial Value [ ${1:Table::Field}; ${2:value} ]$0",
+    "description": "Set Next Serial Value",
+    "scope": "source.filemaker"
+  },
+  "Set Selection [ss]": {
+    "prefix": "sssetsel",
+    "body": "Set Selection [ ${1:Table::Field}; Start Position: ${2:1}; End Position: ${3:10} ]$0",
+    "description": "Set Selection",
+    "scope": "source.filemaker"
+  },
   "Set Variable [block]": {
     "prefix": "setv",
     "body": "Set Variable [ \\$${1:varName}; Value: ${2:value} ]$0",
     "description": "Set Variable script step",
+    "scope": "source.filemaker"
+  },
+  "Set Variable [ss]": {
+    "prefix": "sssetvar",
+    "body": "Set Variable [ \\$${1:varName}; Value: ${2:value} ]$0",
+    "description": "Set Variable",
+    "scope": "source.filemaker"
+  },
+  "Set Web Viewer [ss]": {
+    "prefix": "sswebviewer",
+    "body": "Set Web Viewer [\n\tObject Name: \"${1:webViewerName}\";\n\tURL: \"${2:https://}\"\n]$0",
+    "description": "Set Web Viewer",
+    "scope": "source.filemaker"
+  },
+  "Set Window Title [ss]": {
+    "prefix": "sswintitle",
+    "body": "Set Window Title [ Current Window; New Title: \"${1:title}\" ]$0",
+    "description": "Set Window Title",
+    "scope": "source.filemaker"
+  },
+  "Set Zoom Level [ss]": {
+    "prefix": "sszoom",
+    "body": "Set Zoom Level [ ${1:100}%; Lock ]$0",
+    "description": "Set Zoom Level",
     "scope": "source.filemaker"
   },
   "SetPrecision": {
@@ -2010,6 +3564,42 @@
     "description": "SetRecursion",
     "scope": "source.filemaker"
   },
+  "Show All Records [ss]": {
+    "prefix": "ssshowAll",
+    "body": "Show All Records$0",
+    "description": "Show All Records",
+    "scope": "source.filemaker"
+  },
+  "Show Custom Dialog [3 buttons] [ss]": {
+    "prefix": "ssdialog3",
+    "body": "Show Custom Dialog [\n\tTitle: \"${1:Title}\";\n\tMessage: \"${2:Message}\";\n\tDefault Button: \"${3:OK}\", Commit: \"Yes\";\n\tButton 2: \"${4:Option 2}\", Commit: \"No\";\n\tButton 3: \"${5:Cancel}\", Commit: \"No\"\n]$0",
+    "description": "Show Custom Dialog with 3 buttons",
+    "scope": "source.filemaker"
+  },
+  "Show Custom Dialog [ss]": {
+    "prefix": "ssdialog",
+    "body": "Show Custom Dialog [\n\tTitle: \"${1:Title}\";\n\tMessage: \"${2:Message}\";\n\tDefault Button: \"${3:OK}\", Commit: \"Yes\";\n\tButton 2: \"${4:Cancel}\", Commit: \"No\"\n]$0",
+    "description": "Show Custom Dialog",
+    "scope": "source.filemaker"
+  },
+  "Show Omitted Only [ss]": {
+    "prefix": "ssshowomit",
+    "body": "Show Omitted Only$0",
+    "description": "Show Omitted Only",
+    "scope": "source.filemaker"
+  },
+  "Show/Hide Menubar [ss]": {
+    "prefix": "ssmenubar",
+    "body": "Show/Hide Menubar [ ${1:Show} ]$0",
+    "description": "Show/Hide Menubar",
+    "scope": "source.filemaker"
+  },
+  "Show/Hide Toolbars [ss]": {
+    "prefix": "sstoolbar",
+    "body": "Show/Hide Toolbars [ ${1:Show} ]$0",
+    "description": "Show/Hide Toolbars",
+    "scope": "source.filemaker"
+  },
   "Sign": {
     "prefix": "Sign",
     "body": "Sign ( ${1:number} )$0",
@@ -2020,6 +3610,18 @@
     "prefix": "Sin",
     "body": "Sin ( ${1:angleInRadians} )$0",
     "description": "Sin",
+    "scope": "source.filemaker"
+  },
+  "Sort Records [ss]": {
+    "prefix": "sssort",
+    "body": "Sort Records [ Restore; With dialog: Off ]$0",
+    "description": "Sort Records",
+    "scope": "source.filemaker"
+  },
+  "Sort Records by Field [ss]": {
+    "prefix": "sssortf",
+    "body": "Sort Records by Field [ ${1:Table::Field}; ${2:Ascending} ]$0",
+    "description": "Sort Records by Field",
     "scope": "source.filemaker"
   },
   "SortValues": {
@@ -2166,6 +3768,12 @@
     "description": "Timestamp",
     "scope": "source.filemaker"
   },
+  "Trigger Claris Connect Flow [ss]": {
+    "prefix": "ssflow",
+    "body": "Trigger Claris Connect Flow [ \"${1:FlowURL}\" ]$0",
+    "description": "Trigger Claris Connect Flow",
+    "scope": "source.filemaker"
+  },
   "Trim": {
     "prefix": "Trim",
     "body": "Trim ( ${1:text} )$0",
@@ -2184,10 +3792,28 @@
     "description": "Truncate",
     "scope": "source.filemaker"
   },
+  "Truncate Table [ss]": {
+    "prefix": "sstruncate",
+    "body": "Truncate Table [ With dialog: Off; Table: \"${1:TableName}\" ]$0",
+    "description": "Truncate Table",
+    "scope": "source.filemaker"
+  },
+  "Undo/Redo [ss]": {
+    "prefix": "ssundo",
+    "body": "Undo/Redo [ ${1:Undo} ]$0",
+    "description": "Undo/Redo",
+    "scope": "source.filemaker"
+  },
   "UniqueValues": {
     "prefix": "UniqueValues",
     "body": "UniqueValues ( ${1:values} ${2:; ${3:DATATYPE: 1 Text | 2 Number | 3 Date | 4 Time | 5 Timestamp} ${4:; ${5:LOCALE: en-US, fr-FR, it-IT, de-DE, es-ES, pt-BR, zh-Hans}}} )$0",
     "description": "",
+    "scope": "source.filemaker"
+  },
+  "Unsort Records [ss]": {
+    "prefix": "ssunsort",
+    "body": "Unsort Records$0",
+    "description": "Unsort Records",
     "scope": "source.filemaker"
   },
   "Upper": {
@@ -2236,6 +3862,12 @@
     "prefix": "VerifyContainer",
     "body": "VerifyContainer ( ${1:field1} )$0",
     "description": "VerifyContainer",
+    "scope": "source.filemaker"
+  },
+  "View As [ss]": {
+    "prefix": "ssviewas",
+    "body": "View As [ ${1:Form View} ]$0",
+    "description": "View As",
     "scope": "source.filemaker"
   },
   "WeekOfYear": {
@@ -2287,6 +3919,12 @@
     "prefix": "WordCount",
     "body": "WordCount ( ${1:text} )$0",
     "description": "WordCount",
+    "scope": "source.filemaker"
+  },
+  "Write to Data File [ss]": {
+    "prefix": "sswrite",
+    "body": "Write to Data File [\n\tFile ID: ${1:fileID};\n\tData: ${2:data};\n\tData Type: UTF-16\n]$0",
+    "description": "Write to Data File",
     "scope": "source.filemaker"
   },
   "Year": {

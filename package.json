@@ -63,6 +63,13 @@
         "language": "filemaker",
         "path": "./snippets/filemaker.json"
       }
+    ],
+    "themes": [
+      {
+        "label": "FileMaker Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/filemaker-dark.json"
+      }
     ]
   },
   "dependencies": {

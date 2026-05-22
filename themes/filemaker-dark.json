@@ -1,0 +1,127 @@
+{
+  "name": "FileMaker Dark",
+  "type": "dark",
+  "colors": {
+    "editor.background": "#282A36",
+    "editor.foreground": "#F8F8F2",
+    "editorLineNumber.foreground": "#6272A4",
+    "editorCursor.foreground": "#F8F8F2",
+    "editor.selectionBackground": "#44475A",
+    "editor.lineHighlightBackground": "#44475A50"
+  },
+  "tokenColors": [
+    {
+      "name": "Comments",
+      "scope": [
+        "comment.line.double-slash.filemaker",
+        "comment.line.hash.filemaker",
+        "comment.block.filemaker"
+      ],
+      "settings": { "foreground": "#6272A4", "fontStyle": "italic" }
+    },
+    {
+      "name": "Strings",
+      "scope": "string.quoted.double.filemaker",
+      "settings": { "foreground": "#F1FA8C" }
+    },
+    {
+      "name": "Numbers",
+      "scope": "constant.numeric.filemaker",
+      "settings": { "foreground": "#BD93F9" }
+    },
+    {
+      "name": "Built-in functions",
+      "scope": "support.function.builtin_functions.filemaker",
+      "settings": { "foreground": "#BD93F9" }
+    },
+    {
+      "name": "AI functions",
+      "scope": "support.function.ai.filemaker",
+      "settings": { "foreground": "#FF79C6", "fontStyle": "bold" }
+    },
+    {
+      "name": "JSON functions",
+      "scope": "support.function.json.filemaker",
+      "settings": { "foreground": "#8BE9FD", "fontStyle": "bold" }
+    },
+    {
+      "name": "Crypto functions",
+      "scope": "support.function.crypto.filemaker",
+      "settings": { "foreground": "#FFB86C", "fontStyle": "bold" }
+    },
+    {
+      "name": "Date/Time functions",
+      "scope": "support.function.datetime.filemaker",
+      "settings": { "foreground": "#50FA7B" }
+    },
+    {
+      "name": "Aggregate functions",
+      "scope": "support.function.aggregate.filemaker",
+      "settings": { "foreground": "#F1FA8C", "fontStyle": "bold" }
+    },
+    {
+      "name": "External functions",
+      "scope": "support.function.external_functions.filemaker",
+      "settings": { "foreground": "#FF79C6", "fontStyle": "italic" }
+    },
+    {
+      "name": "Control flow",
+      "scope": "keyword.control.filemaker",
+      "settings": { "foreground": "#FF79C6", "fontStyle": "bold" }
+    },
+    {
+      "name": "Script steps",
+      "scope": "keyword.other.scriptStep.filemaker",
+      "settings": { "foreground": "#8BE9FD" }
+    },
+    {
+      "name": "Script parameters",
+      "scope": "keyword.other.scriptParam.filemaker",
+      "settings": { "foreground": "#FFB86C" }
+    },
+    {
+      "name": "Local variables",
+      "scope": "variable.script_variable.local.filemaker",
+      "settings": { "foreground": "#F1FA8C" }
+    },
+    {
+      "name": "Global variables",
+      "scope": "variable.script_variable.global.filemaker",
+      "settings": { "foreground": "#FFB86C", "fontStyle": "bold" }
+    },
+    {
+      "name": "Table name",
+      "scope": "entity.name.table.filemaker",
+      "settings": { "foreground": "#50FA7B" }
+    },
+    {
+      "name": "Field name",
+      "scope": "variable.other.field.filemaker",
+      "settings": { "foreground": "#F8F8F2" }
+    },
+    {
+      "name": "JSON constants",
+      "scope": [
+        "support.constant.json.filemaker",
+        "constant.language.filemaker",
+        "constant.language.boolean.filemaker"
+      ],
+      "settings": { "foreground": "#FF79C6" }
+    },
+    {
+      "name": "Operators",
+      "scope": [
+        "keyword.operator.arithmetic.filemaker",
+        "keyword.operator.comparison.filemaker",
+        "keyword.operator.logical.filemaker",
+        "keyword.operator.string.filemaker"
+      ],
+      "settings": { "foreground": "#FF79C6" }
+    },
+    {
+      "name": "Escape characters",
+      "scope": "constant.character.escape.filemaker",
+      "settings": { "foreground": "#FF79C6" }
+    }
+  ]
+}

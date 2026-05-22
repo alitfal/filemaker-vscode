@@ -1,5 +1,26 @@
 # Change Log
 
+## [2.2.0] - 2026-05-22
+
+### Major update — complete FileMaker Dev Tools
+
+#### New features
+- **Hover documentation** — hover over any function to see signature, description and example inline
+- **FileMaker Dark theme** — included theme, no manual configuration needed
+- **Table::Field highlighting** — table name in green, field name in white
+- **English + Spanish** — script steps highlighted in both languages
+- **Code folding** — collapse If/End If and Loop/End Loop blocks
+- **# as line comment** — `Cmd+/` now toggles `#` comments
+
+#### Snippets (654 total)
+- 136 Get() quick snippets — one per parameter (gdate, gerr, gscript, grid, gfound...)
+- 137 script step snippets — one per script step with full parameter templates
+- Block snippets: loop, ifb, ife, ifeib, whileb, whilec, caseb, letb, sqlf, iferr, jset
+
+#### Documentation
+- README completely rewritten in English
+- Full feature documentation with snippet reference tables
+
 ## [2.0.9] - 2026-05-22
 
 ### Auto-indentation
