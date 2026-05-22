@@ -1,5 +1,15 @@
 # Change Log
 
+## [2.2.2] - 2026-05-22
+
+### Documentation
+- README completely rewritten — full feature documentation with all snippet prefixes
+- Fixed badges (replaced retired dynamic badges with static badges)
+- Clarified hover documentation scope: calculation functions only (225+)
+- Added complete snippet reference tables for Get(), block snippets and script step snippets
+- Added theme setup instructions for FileMaker Dark and Dracula Pro
+- Added comment toggle documentation
+
 ## [2.2.1] - 2026-05-22
 
 ### Bug fixes
