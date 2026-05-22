@@ -51,6 +51,12 @@
     "description": "",
     "scope": "source.filemaker"
   },
+  "Case [block]": {
+    "prefix": "caseb",
+    "body": "Case (\n\t${1:condition1} ; ${2:result1} ;\n\t${3:condition2} ; ${4:result2} ;\n\t${5:elseResult}\n)$0",
+    "description": "Case block with multiple conditions",
+    "scope": "source.filemaker"
+  },
   "Case [inline]": {
     "prefix": "Case",
     "body": "Case ( ${1:test1} ; ${2:result1} ; ${3:test2} ; ${4:result2} ; ${5:defaultResult} )$0",
@@ -261,6 +267,12 @@
     "description": "ExecuteSQL",
     "scope": "source.filemaker"
   },
+  "ExecuteSQL [full]": {
+    "prefix": "sqlf",
+    "body": "ExecuteSQL (\n\t\"SELECT ${2:fields}\n\t FROM ${3:TableName}\n\t WHERE ${4:condition}\n\t ORDER BY ${5:field}\" ;\n\t${6:fieldSeparator} ;\n\t${7:rowSeparator}\n)$0",
+    "description": "ExecuteSQL full template with ORDER BY",
+    "scope": "source.filemaker"
+  },
   "ExecuteSQL [inline]": {
     "prefix": "ExecuteSQL",
     "body": "ExecuteSQL ( \"SELECT ${1:fields} FROM ${2:table} WHERE ${3:expression} \" ; \"\" ; \"\" ; \"\" )",
@@ -277,6 +289,12 @@
     "prefix": "ExecuteSQL",
     "body": "ExecuteSQL (\"\n\nSELECT\n\t${1:fields}\nFROM\n\t${2:table}\nWHERE\n\t${3:expression}\n\n\" ; \"\" ; \"\" ; \"\" )",
     "description": "",
+    "scope": "source.filemaker"
+  },
+  "Exit Script [block]": {
+    "prefix": "es",
+    "body": "Exit Script [ Text Result: ${1:result} ]$0",
+    "description": "Exit Script with result",
     "scope": "source.filemaker"
   },
   "Exp": {
@@ -1430,6 +1448,18 @@
     "description": "If inline con condicion/verdadero/falso.",
     "scope": "source.filemaker"
   },
+  "If Else If [block]": {
+    "prefix": "ifeib",
+    "body": "If [ ${1:condition1} ]\n\t$2\nElse If [ ${3:condition2} ]\n\t$4\nElse\n\t$0\nEnd If",
+    "description": "If / Else If / Else block",
+    "scope": "source.filemaker"
+  },
+  "If Get LastError [block]": {
+    "prefix": "iferr",
+    "body": "If [ Get ( LastError ) \u2260 0 ]\n\t# Handle error\n\tSet Variable [ \\$error; Value: Get ( LastError ) ]\n\t$0\nEnd If",
+    "description": "If block for error handling",
+    "scope": "source.filemaker"
+  },
   "Int": {
     "prefix": "Int",
     "body": "Int ( ${1:number} )$0",
@@ -1520,6 +1550,12 @@
     "description": "JSONSetElement",
     "scope": "source.filemaker"
   },
+  "JSONSetElement [chain]": {
+    "prefix": "jsonset",
+    "body": "JSONSetElement ( ${1:\"{}\"} ;\n\t[ \"${2:key1}\" ; ${3:value1} ; JSONString ] ;\n\t[ \"${4:key2}\" ; ${5:value2} ; JSONString ] ;\n\t[ \"${6:key3}\" ; ${7:value3} ; JSONString ]\n)$0",
+    "description": "JSONSetElement with 3 key-value pairs",
+    "scope": "source.filemaker"
+  },
   "JSONSetElement [multi]": {
     "prefix": "JSONSetElement multi",
     "body": "JSONSetElement ( ${1:json} ;\n\t[ \"${2:key1}\" ; ${3:value1} ; ${4:type1} ] ;\n\t[ \"${5:key2}\" ; ${6:value2} ; ${7:type2} ]\n)$0",
@@ -1602,6 +1638,12 @@
     "prefix": "Length",
     "body": "Length ( ${1:field} )$0",
     "description": "Length",
+    "scope": "source.filemaker"
+  },
+  "Let [block]": {
+    "prefix": "letb",
+    "body": "Let (\n\t[\n\t\t${1:var1} = ${2:value1} ;\n\t\t${3:var2} = ${4:value2}\n\t] ;\n\t$0\n)",
+    "description": "Let block with multiple variables",
     "scope": "source.filemaker"
   },
   "Let [inline]": {
@@ -1760,6 +1802,12 @@
     "description": "PatternCount",
     "scope": "source.filemaker"
   },
+  "Perform Script [block]": {
+    "prefix": "ps",
+    "body": "Perform Script [ \"${1:ScriptName}\"; Parameter: ${2:parameter} ]$0",
+    "description": "Perform Script with parameter",
+    "scope": "source.filemaker"
+  },
   "Pi": {
     "prefix": "Pi",
     "body": "Pi",
@@ -1908,6 +1956,12 @@
     "prefix": "SerialIncrement",
     "body": "SerialIncrement ( ${1:text} ; ${2:incrementBy} )$0",
     "description": "SerialIncrement",
+    "scope": "source.filemaker"
+  },
+  "Set Variable [block]": {
+    "prefix": "setv",
+    "body": "Set Variable [ \\$${1:varName}; Value: ${2:value} ]$0",
+    "description": "Set Variable script step",
     "scope": "source.filemaker"
   },
   "SetPrecision": {
@@ -2172,6 +2226,12 @@
     "prefix": "whilet",
     "body": "While (\n\t[ ${1:initialVariables} ] ;\n\t${2:condition} ;\n\t[ ${3:logicVariables} ] ;\n\t${4:result}\n)$0",
     "description": "While con los 4 parametros expandidos.",
+    "scope": "source.filemaker"
+  },
+  "While counter [block]": {
+    "prefix": "whilec",
+    "body": "While (\n\t[ i = 1 ] ;\n\ti \u2264 ${1:total} ;\n\t[\n\t\t$0\n\t\ti = i + 1\n\t] ;\n\ti\n)",
+    "description": "While loop with counter pattern",
     "scope": "source.filemaker"
   },
   "WindowNames": {
