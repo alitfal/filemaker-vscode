@@ -1,5 +1,18 @@
 # Change Log
 
+## [2.0.9] - 2026-05-22
+
+### Auto-indentation
+- Automatic indentation for `If`, `Else If`, `Else`, `Loop`, `While`, `Case`, `Let` blocks
+- Automatic outdent for `End If`, `End Loop`, `End While`
+- Editor now behaves like a native FileMaker script editor
+
+## [2.0.8] - 2026-05-22
+
+### Rebranding
+- Extension renamed to **FileMaker Dev Tools**
+- Updated Marketplace description
+
 ## [2.0.6] - 2026-05-21
 
 ### Cobertura completa FM 2025
