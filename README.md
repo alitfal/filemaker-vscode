@@ -3,9 +3,9 @@
 > The most complete Visual Studio Code extension for **FileMaker / Claris Pro** development.
 > Full coverage through **FileMaker 2025 (v22)** — functions, script steps, Get() params, AI, hover docs, and more.
 
-[![Version](https://img.shields.io/visual-studio-marketplace/v/alitfal.filemaker-vscode-updated?label=version)](https://marketplace.visualstudio.com/items?itemName=alitfal.filemaker-vscode-updated)
-[![Installs](https://img.shields.io/visual-studio-marketplace/i/alitfal.filemaker-vscode-updated)](https://marketplace.visualstudio.com/items?itemName=alitfal.filemaker-vscode-updated)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE.md)
+[![Version](https://img.shields.io/badge/version-2.2.1-purple)](https://marketplace.visualstudio.com/items?itemName=alitfal.filemaker-vscode-updated)
+[![Marketplace](https://img.shields.io/badge/VS%20Code-Marketplace-blue)](https://marketplace.visualstudio.com/items?itemName=alitfal.filemaker-vscode-updated)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE.md)
 
 ---
 
