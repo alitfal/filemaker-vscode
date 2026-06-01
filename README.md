@@ -1,9 +1,9 @@
 # FileMaker Dev Tools
 
 > The most complete Visual Studio Code extension for **FileMaker / Claris Pro** development.
-> Full coverage through **FileMaker 2025 (v22)** — functions, script steps, Get() params, AI, hover docs, and more.
+> Full coverage through **FileMaker 2025 (v22)** — functions, script steps, Get() params, AI, hover docs, live schema autocomplete and more.
 
-[![Version](https://img.shields.io/badge/version-2.2.2-purple)](https://marketplace.visualstudio.com/items?itemName=alitfal.filemaker-vscode-updated)
+[![Version](https://img.shields.io/badge/version-2.3.0-purple)](https://marketplace.visualstudio.com/items?itemName=alitfal.filemaker-vscode-updated)
 [![Marketplace](https://img.shields.io/badge/VS%20Code-Marketplace-blue)](https://marketplace.visualstudio.com/items?itemName=alitfal.filemaker-vscode-updated)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE.md)
 
@@ -35,10 +35,27 @@ Colors differentiated by element type — works out of the box with the included
 | Strings | 🟡 Yellow |
 | Comments `#` and `//` | ⚫ Grey italic |
 
-### 🖱️ Hover Documentation
-Hover over any FileMaker **calculation function** to see its signature, description, and example inline — no need to leave VS Code.
+### 🔌 Live Schema Autocomplete (FileMaker Data API)
+Connect directly to your FileMaker Server and get real-time autocomplete for your actual database schema.
 
-> **Note:** Hover documentation covers calculation functions (225+). Script steps are not yet covered.
+- **Table::Field** — type `::` after a table name and get field suggestions
+- **Layout names** — suggested after `Go to Layout`, `New Window`, etc.
+- **Script names** — suggested after `Perform Script`, `Perform Script On Server`, etc.
+- **Credentials stored securely** in the system keychain via VS Code SecretStorage
+- **Multiple connection profiles** — dev, staging, production
+- **Status bar indicator** showing the active connection
+
+**Commands:**
+- `FileMaker: Connect to Server` — add a new connection profile
+- `FileMaker: Switch Connection` — switch between profiles
+- `FileMaker: Refresh Schema` — update schema after database changes
+- `FileMaker: Disconnect` — disconnect from server
+- `FileMaker: Show Connection Status` — show connection details
+
+### 🖱️ Hover Documentation
+Hover over any FileMaker **calculation function** to see its signature, description, and example inline.
+
+> Hover documentation covers calculation functions (225+). Script steps not yet covered.
 
 ### 📦 654+ Snippets
 The most complete FileMaker snippet library available.
@@ -145,13 +162,28 @@ code --install-extension filemaker-vscode-updated-x.x.x.vsix
 
 ---
 
+## 🔌 Connecting to FileMaker Server
+
+1. Open the Command Palette (`Cmd+Shift+P`)
+2. Run `FileMaker: Connect to Server`
+3. Enter your connection profile name (e.g. `dev`)
+4. Enter your FileMaker Server URL (e.g. `https://192.168.1.163`)
+5. Enter your database name
+6. Enter your username and password
+
+Credentials are stored securely in your system keychain — never in plain text files.
+
+Once connected, typing `::` after any table name will suggest all available fields. Layout and script names are also suggested in the appropriate context.
+
+To update the schema after database changes: `FileMaker: Refresh Schema`
+
+---
+
 ## 🎨 Theme Setup
 
 ### Option A — Use the included theme (recommended)
 1. `Cmd+Shift+P` → `Color Theme`
 2. Select **FileMaker Dark**
-
-No additional configuration needed. Colors work immediately.
 
 ### Option B — Dracula Pro
 Add to your VS Code `settings.json` (`Cmd+Shift+P` → `Open User Settings JSON`):
@@ -204,7 +236,7 @@ For `.txt` or other formats, select the language manually in the VS Code status 
 
 | Category | Functions |
 |----------|---------|
-| Text | `Substitute`, `FilterValues`, `UniqueValues`, `GetTextFromPDF`, `Left`, `Middle`, `Right`, `Position`, `PatternCount`... |
+| Text | `Substitute`, `FilterValues`, `UniqueValues`, `GetTextFromPDF`, `Left`, `Middle`, `Right`... |
 | Number | `Abs`, `Round`, `Mod`, `SetPrecision`, `Sqrt`, `Truncate`... |
 | Date / Time | `Date`, `Timestamp`, `WeekOfYear`, `DayOfWeek`, `MonthName`... |
 | Container | `GetLiveTextAsJSON`, `GetContainerTextInfo`, `Base64Encode`, `VerifyContainer`... |
@@ -224,13 +256,13 @@ For `.txt` or other formats, select the language manually in the VS Code status 
 | Navigation | `Go to Layout`, `Go to Record/Request/Page`, `Go to Portal Row`, `Go to Related Record`... |
 | Editing | `Cut`, `Copy`, `Paste`, `Select All`, `Set Selection`, `Undo/Redo`... |
 | Fields | `Set Field`, `Set Field By Name`, `Replace Field Contents`, `Insert from URL`... |
-| Records | `New Record/Request`, `Delete Record/Request`, `Import Records`, `Export Records`, `Truncate Table`... |
+| Records | `New Record/Request`, `Delete Record/Request`, `Import Records`, `Export Records`... |
 | Found Sets | `Perform Find`, `Show All Records`, `Sort Records`, `Constrain Found Set`... |
-| Windows | `New Window`, `Close Window`, `Freeze Window`, `Refresh Window`, `Move/Resize Window`... |
-| Files | `Open File`, `Close File`, `Save a Copy as`, `Write to Data File`, `Read from Data File`... |
+| Windows | `New Window`, `Close Window`, `Freeze Window`, `Refresh Window`... |
+| Files | `Open File`, `Close File`, `Save a Copy as`, `Write to Data File`... |
 | Accounts | `Add Account`, `Delete Account`, `Re-Login`, `Reset Account Password`... |
-| AI | `Configure AI Account`, `Generate Response from Model`, `Perform Find by Natural Language`, `Perform RAG Action`, `Insert Embedding`... |
-| Miscellaneous | `Show Custom Dialog`, `Execute SQL`, `Send Mail`, `Open URL`, `Perform JavaScript in Web Viewer`... |
+| AI | `Configure AI Account`, `Generate Response from Model`, `Perform Find by Natural Language`... |
+| Miscellaneous | `Show Custom Dialog`, `Execute SQL`, `Send Mail`, `Open URL`... |
 
 ---
 

@@ -121,3 +121,22 @@
 
 ## [1.0.0] - 2019-12-18
 - Initial release on the VSCode extension marketplace
+
+## [2.3.0] - 2026-06-01
+
+### FileMaker Data API Integration — Schema Autocomplete
+
+- Connect directly to your FileMaker Server via Data API
+- Autocomplete for Table::Field — suggests field names after typing `::`
+- Autocomplete for layout names after `Go to Layout`
+- Autocomplete for script names after `Perform Script`
+- Credentials stored securely in VS Code SecretStorage (system keychain)
+- Multiple connection profiles support (dev, production, etc.)
+- Status bar indicator showing connection status
+- Commands:
+  - `FileMaker: Connect to Server`
+  - `FileMaker: Switch Connection`
+  - `FileMaker: Refresh Schema`
+  - `FileMaker: Disconnect`
+  - `FileMaker: Show Connection Status`
+

@@ -2,7 +2,7 @@
   "name": "filemaker-vscode-updated",
   "displayName": "FileMaker Dev Tools",
   "description": "FileMaker / Claris Pro syntax highlighting, snippets and autocompletion. Full FM 2025 coverage: 225+ functions, 200+ script steps, 136 Get() params, AI/embeddings/RAG support.",
-  "version": "2.2.2",
+  "version": "2.3.0",
   "publisher": "alitfal",
   "scripts": {
     "vscode:prepublish": "npm run compile",
@@ -32,6 +32,26 @@
       {
         "command": "functions.jsonToJsonSetElement",
         "title": "FileMaker: JSON to JSONSetElement()"
+      },
+      {
+        "command": "filemaker.connect",
+        "title": "FileMaker: Connect to Server"
+      },
+      {
+        "command": "filemaker.switchConnection",
+        "title": "FileMaker: Switch Connection"
+      },
+      {
+        "command": "filemaker.refreshSchema",
+        "title": "FileMaker: Refresh Schema"
+      },
+      {
+        "command": "filemaker.disconnect",
+        "title": "FileMaker: Disconnect"
+      },
+      {
+        "command": "filemaker.showStatus",
+        "title": "FileMaker: Show Connection Status"
       }
     ],
     "languages": [
@@ -70,7 +90,44 @@
         "uiTheme": "vs-dark",
         "path": "./themes/filemaker-dark.json"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "FileMaker Dev Tools",
+      "properties": {
+        "filemaker.connections": {
+          "type": "array",
+          "default": [],
+          "description": "FileMaker Server connections",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Connection profile name"
+              },
+              "server": {
+                "type": "string",
+                "description": "FileMaker Server URL"
+              },
+              "database": {
+                "type": "string",
+                "description": "Database name"
+              }
+            }
+          }
+        },
+        "filemaker.activeConnection": {
+          "type": "string",
+          "default": "",
+          "description": "Active connection profile name"
+        },
+        "filemaker.autoRefresh": {
+          "type": "boolean",
+          "default": true,
+          "description": "Auto-refresh schema when connecting"
+        }
+      }
+    }
   },
   "dependencies": {},
   "devDependencies": {
