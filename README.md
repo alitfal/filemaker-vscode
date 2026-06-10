@@ -3,7 +3,7 @@
 > The most complete Visual Studio Code extension for **FileMaker / Claris Pro** development.
 > Full coverage through **FileMaker 2026 (v26)** — functions, script steps, Get() params, AI, hover docs, live schema autocomplete and more.
 
-[![Version](https://img.shields.io/badge/version-2.4.0-purple)](https://marketplace.visualstudio.com/items?itemName=alitfal.filemaker-vscode-updated)
+[![Version](https://img.shields.io/badge/version-2.4.2-purple)](https://marketplace.visualstudio.com/items?itemName=alitfal.filemaker-vscode-updated)
 [![Marketplace](https://img.shields.io/badge/VS%20Code-Marketplace-blue)](https://marketplace.visualstudio.com/items?itemName=alitfal.filemaker-vscode-updated)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE.md)
 
