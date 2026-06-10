@@ -1,9 +1,9 @@
 # FileMaker Dev Tools
 
 > The most complete Visual Studio Code extension for **FileMaker / Claris Pro** development.
-> Full coverage through **FileMaker 2025 (v22)** — functions, script steps, Get() params, AI, hover docs, live schema autocomplete and more.
+> Full coverage through **FileMaker 2026 (v26)** — functions, script steps, Get() params, AI, hover docs, live schema autocomplete and more.
 
-[![Version](https://img.shields.io/badge/version-2.3.0-purple)](https://marketplace.visualstudio.com/items?itemName=alitfal.filemaker-vscode-updated)
+[![Version](https://img.shields.io/badge/version-2.4.0-purple)](https://marketplace.visualstudio.com/items?itemName=alitfal.filemaker-vscode-updated)
 [![Marketplace](https://img.shields.io/badge/VS%20Code-Marketplace-blue)](https://marketplace.visualstudio.com/items?itemName=alitfal.filemaker-vscode-updated)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE.md)
 
@@ -50,17 +50,17 @@ Connect directly to your FileMaker Server and get real-time autocomplete for you
 - `FileMaker: Switch Connection` — switch between profiles
 - `FileMaker: Refresh Schema` — update schema after database changes
 - `FileMaker: Disconnect` — disconnect from server
-- `FileMaker: Show Connection Status` — show connection details
+- `FileMaker: Show Connection Status` — show tables, layouts and scripts count
 
 ### 🖱️ Hover Documentation
 Hover over any FileMaker **calculation function** to see its signature, description, and example inline.
 
 > Hover documentation covers calculation functions (225+). Script steps not yet covered.
 
-### 📦 654+ Snippets
+### 📦 678+ Snippets
 The most complete FileMaker snippet library available.
 
-**Quick Get() prefixes** — 136 snippets, one per parameter:
+**Quick Get() prefixes** — 139 snippets, one per parameter:
 
 | Prefix | Expands to |
 |--------|-----------|
@@ -68,20 +68,17 @@ The most complete FileMaker snippet library available.
 | `gtime` | `Get ( CurrentTime )` |
 | `gts` | `Get ( CurrentTimestamp )` |
 | `gerr` | `Get ( LastError )` |
-| `gerrd` | `Get ( LastErrorDetail )` |
 | `gscript` | `Get ( ScriptName )` |
 | `gparam` | `Get ( ScriptParameter )` |
-| `gresult` | `Get ( ScriptResult )` |
 | `grid` | `Get ( RecordID )` |
 | `gfound` | `Get ( FoundCount )` |
-| `gtotal` | `Get ( TotalRecordCount )` |
 | `gchoice` | `Get ( LastMessageChoice )` |
-| `glayout` | `Get ( LayoutName )` |
-| `gacct` | `Get ( AccountName )` |
 | `gaiacct` | `Get ( AIAccountName )` |
-| `gaimodel` | `Get ( AIModelName )` |
 | `gtokens` | `Get ( LastStepTokensUsed )` |
-| ... | 119 more |
+| `gwuuid` | `Get ( WindowUUID )` — FM 2026+ |
+| `gpassdays` | `Get ( AccountPasswordDaysRemaining )` — FM 2026+ |
+| `gguidedaccess` | `Get ( GuidedAccessState )` — FM 2026+ |
+| ... | 125 more |
 
 **Block snippets:**
 
@@ -99,8 +96,11 @@ The most complete FileMaker snippet library available.
 | `sqlf` | `ExecuteSQL` full template with ORDER BY |
 | `iferr` | `If` error handling with `Get ( LastError )` |
 | `jset` | `JSONSetElement` with 3 key-value pairs |
+| `pdfworkflow` | Full PDF creation workflow — FM 2026+ |
+| `persistread` | Read from persistent data store — FM 2026+ |
+| `persistwrite` | Write to persistent data store — FM 2026+ |
 
-**Script step snippets** — 137 snippets with full parameter templates:
+**Script step snippets** — 147 snippets with full parameter templates:
 
 | Prefix | Expands to |
 |--------|-----------|
@@ -113,28 +113,20 @@ The most complete FileMaker snippet library available.
 | `sssetvar` | `Set Variable` |
 | `ssnewrec` | `New Record/Request` |
 | `sscommit` | `Commit Records/Requests` |
-| `ssrevert` | `Revert Record/Request` |
-| `ssdelrec` | `Delete Record/Request` |
-| `sssort` | `Sort Records` |
-| `ssexport` | `Export Records` |
-| `ssimport` | `Import Records` |
-| `sssavepdf` | `Save Records as PDF` |
-| `sssavexls` | `Save Records as Excel` |
-| `sssavejsonl` | `Save Records as JSONL` |
-| `ssinserturl` | `Insert from URL` |
-| `sssendmail` | `Send Mail` |
-| `ssopenurl` | `Open URL` |
-| `ssps` | `Perform Script` |
-| `sspos` | `Perform Script On Server` |
-| `ssexit` | `Exit Script` |
 | `ssairesp` | `Generate Response from Model` |
 | `ssrag` | `Perform RAG Action` |
 | `ssnlfind` | `Perform Find by Natural Language` |
-| `ssnlsql` | `Perform SQL Query by Natural Language` |
-| `sssemfind` | `Perform Semantic Find` |
 | `ssembedding` | `Insert Embedding` |
-| `ssaiconfig` | `Configure AI Account` |
-| ... | 107 more |
+| `ssimagecaption` | `Insert Image Caption` — FM 2026+ |
+| `ssimagecaptionfs` | `Insert Image Captions in Found Set` — FM 2026+ |
+| `ssconfigpersist` | `Configure Persistent Data` — FM 2026+ |
+| `sscreatepdf` | `Create PDF` — FM 2026+ |
+| `ssopenpdf` | `Open PDF` — FM 2026+ |
+| `ssappendpdf` | `Append to PDF` — FM 2026+ |
+| `ssclosepdf` | `Close PDF` — FM 2026+ |
+| `ssprintpdf` | `Print PDF` — FM 2026+ |
+| `ssflushcookies` | `Flush Web Viewer Cookies` — FM 2026+ |
+| ... | 125 more |
 
 ### 🔧 JSON → JSONSetElement() Converter
 Select any JSON text and run **FileMaker: JSON to JSONSetElement()** from the Command Palette (`Cmd+Shift+P`) to instantly convert it to a FileMaker expression.
@@ -230,9 +222,9 @@ For `.txt` or other formats, select the language manually in the VS Code status 
 
 ---
 
-## 🆕 Complete FM 2025 Coverage
+## 🆕 Complete FM 2026 Coverage
 
-### Calculation Functions (225+)
+### Calculation Functions (230+)
 
 | Category | Functions |
 |----------|---------|
@@ -246,9 +238,11 @@ For `.txt` or other formats, select the language manually in the VS Code status 
 | Crypto | `CryptGeneratePassKey`, `CryptGenerateSignature`, `CryptDigest`, `CryptEncrypt`... |
 | Aggregate | `Sum`, `Average`, `Count`, `Max`, `Min`, `StDev`, `Variance`... |
 | Design | `FieldNames`, `TableNames`, `ScriptNames`, `LayoutNames`, `RelationInfo`... |
-| Get | **136 parameters** — complete FM 2025 list |
+| Persistent Data | `GetPersistentData`, `ListPersistentDataIDs` — FM 2026+ |
+| DDL / AI Metadata | `FieldAnnotation`, `BaseTableComment`, `FieldDisplayNames` — FM 2026+ |
+| Get | **139 parameters** — complete FM 2026 list |
 
-### Script Steps (200+)
+### Script Steps (210+)
 
 | Category | Examples |
 |----------|---------|
@@ -259,10 +253,12 @@ For `.txt` or other formats, select the language manually in the VS Code status 
 | Records | `New Record/Request`, `Delete Record/Request`, `Import Records`, `Export Records`... |
 | Found Sets | `Perform Find`, `Show All Records`, `Sort Records`, `Constrain Found Set`... |
 | Windows | `New Window`, `Close Window`, `Freeze Window`, `Refresh Window`... |
+| PDF | `Create PDF`, `Open PDF`, `Append to PDF`, `Close PDF`, `Cancel PDF`, `Print PDF` — FM 2026+ |
 | Files | `Open File`, `Close File`, `Save a Copy as`, `Write to Data File`... |
 | Accounts | `Add Account`, `Delete Account`, `Re-Login`, `Reset Account Password`... |
-| AI | `Configure AI Account`, `Generate Response from Model`, `Perform Find by Natural Language`... |
-| Miscellaneous | `Show Custom Dialog`, `Execute SQL`, `Send Mail`, `Open URL`... |
+| AI | `Configure AI Account`, `Generate Response from Model`, `Insert Image Caption`, `Perform RAG Action`... |
+| Persistent Data | `Configure Persistent Data` — FM 2026+ |
+| Miscellaneous | `Show Custom Dialog`, `Execute SQL`, `Send Mail`, `Flush Web Viewer Cookies`... |
 
 ---
 

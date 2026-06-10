@@ -35,6 +35,12 @@
     "description": "Allow User Abort script step",
     "scope": "source.filemaker"
   },
+  "Append to PDF [ss]": {
+    "prefix": "ssappendpdf",
+    "body": "Append to PDF [\n\t${1:source}\n]$0",
+    "description": "Appends PDF pages to the currently open PDF. FM 2026+",
+    "scope": "source.filemaker"
+  },
   "Arrange All Windows [ss]": {
     "prefix": "ssarrange",
     "body": "Arrange All Windows [ ${1:Tile Horizontally} ]$0",
@@ -75,10 +81,22 @@
     "description": "",
     "scope": "source.filemaker"
   },
+  "BaseTableComment": {
+    "prefix": "BaseTableComment",
+    "body": "BaseTableComment ( ${1:tableName} )$0",
+    "description": "Returns the comment of the specified base table from Manage Database. FM 2026+",
+    "scope": "source.filemaker"
+  },
   "Beep [ss]": {
     "prefix": "ssbeep",
     "body": "Beep$0",
     "description": "Beep",
+    "scope": "source.filemaker"
+  },
+  "Cancel PDF [ss]": {
+    "prefix": "sscancelpdf",
+    "body": "Cancel PDF$0",
+    "description": "Closes the PDF open in memory without saving it. FM 2026+",
     "scope": "source.filemaker"
   },
   "Case [block]": {
@@ -135,6 +153,12 @@
     "description": "Close File",
     "scope": "source.filemaker"
   },
+  "Close PDF [ss]": {
+    "prefix": "ssclosepdf",
+    "body": "Close PDF [ \"${1:outputPath}\" ]$0",
+    "description": "Closes and saves the open PDF to a file path, variable, or container field. FM 2026+",
+    "scope": "source.filemaker"
+  },
   "Close Popover [ss]": {
     "prefix": "ssclosepop",
     "body": "Close Popover$0",
@@ -187,6 +211,12 @@
     "prefix": "ssmlmodel",
     "body": "Configure Machine Learning Model [\n\tName: \"${1:modelName}\";\n\tModel File: ${2:Table::Field}\n]$0",
     "description": "Configure Machine Learning Model. FM 2024+",
+    "scope": "source.filemaker"
+  },
+  "Configure Persistent Data [ss]": {
+    "prefix": "ssconfigpersist",
+    "body": "Configure Persistent Data [\n\tName: \"${1:dataName}\";\n\tInstance ID: ${2:instanceID};\n\tValue: ${3:value}\n]$0",
+    "description": "Sets or removes an entry in the persistent data store. FM 2026+",
     "scope": "source.filemaker"
   },
   "Configure Prompt Template [ss]": {
@@ -253,6 +283,12 @@
     "prefix": "sscreatedf",
     "body": "Create Data File [ \"${1:filename}\"; ${2:target} ]$0",
     "description": "Create Data File",
+    "scope": "source.filemaker"
+  },
+  "Create PDF [ss]": {
+    "prefix": "sscreatepdf",
+    "body": "Create PDF$0",
+    "description": "Creates an empty PDF file in memory. FM 2026+",
     "scope": "source.filemaker"
   },
   "CryptAuthCode": {
@@ -552,6 +588,12 @@
     "description": "Factorial",
     "scope": "source.filemaker"
   },
+  "FieldAnnotation": {
+    "prefix": "FieldAnnotation",
+    "body": "FieldAnnotation ( ${1:fieldReference} )$0",
+    "description": "Returns the AI annotation of the specified field set in Advanced Field Options. FM 2026+",
+    "scope": "source.filemaker"
+  },
   "FieldBounds": {
     "prefix": "FieldBounds",
     "body": "FieldBounds ( ${1:Get ( FileName )} ; ${2:layoutName} ; ${3:fieldName} )$0",
@@ -562,6 +604,12 @@
     "prefix": "FieldComment",
     "body": "FieldComment ( ${1:Get ( FileName )} ; ${2:fieldName} )$0",
     "description": "FieldComment",
+    "scope": "source.filemaker"
+  },
+  "FieldDisplayNames": {
+    "prefix": "FieldDisplayNames",
+    "body": "FieldDisplayNames ( ${1:layoutName} ; ${2:fieldName} )$0",
+    "description": "Returns the display names of a field as JSON data. FM 2026+",
     "scope": "source.filemaker"
   },
   "FieldIDs": {
@@ -624,6 +672,12 @@
     "description": "Flush Cache to Disk",
     "scope": "source.filemaker"
   },
+  "Flush Web Viewer Cookies [ss]": {
+    "prefix": "ssflushcookies",
+    "body": "Flush Web Viewer Cookies$0",
+    "description": "Flushes all web viewer cookies used in the FileMaker client. FM 2026+",
+    "scope": "source.filemaker"
+  },
   "Freeze Window [ss]": {
     "prefix": "ssfreeze",
     "body": "Freeze Window$0",
@@ -682,6 +736,18 @@
     "prefix": "gacct",
     "body": "Get ( AccountName )$0",
     "description": "Get account name",
+    "scope": "source.filemaker"
+  },
+  "Get(AccountPasswordDaysRemaining)": {
+    "prefix": "Get(AccountPasswordDaysRemaining)",
+    "body": "Get ( AccountPasswordDaysRemaining )$0",
+    "description": "Returns the number of days remaining before the current account password must be changed. FM 2026+",
+    "scope": "source.filemaker"
+  },
+  "Get(AccountPasswordDaysRemaining) [quick]": {
+    "prefix": "gpassdays",
+    "body": "Get ( AccountPasswordDaysRemaining )$0",
+    "description": "Get account password days remaining. FM 2026+",
     "scope": "source.filemaker"
   },
   "Get(AccountPrivilegeSetName)": {
@@ -1216,6 +1282,18 @@
     "prefix": "gfound",
     "body": "Get ( FoundCount )$0",
     "description": "Get found count",
+    "scope": "source.filemaker"
+  },
+  "Get(GuidedAccessState)": {
+    "prefix": "Get(GuidedAccessState)",
+    "body": "Get ( GuidedAccessState )$0",
+    "description": "In FileMaker Go, returns 1 if Guided Access is enabled, otherwise 0. FM 2026+",
+    "scope": "source.filemaker"
+  },
+  "Get(GuidedAccessState) [quick]": {
+    "prefix": "gguidedaccess",
+    "body": "Get ( GuidedAccessState )$0",
+    "description": "Get Guided Access state (FileMaker Go). FM 2026+",
     "scope": "source.filemaker"
   },
   "Get(HighContrastState)": {
@@ -2220,6 +2298,18 @@
     "description": "Get window top",
     "scope": "source.filemaker"
   },
+  "Get(WindowUUID)": {
+    "prefix": "Get(WindowUUID)",
+    "body": "Get ( WindowUUID )$0",
+    "description": "Returns the UUID of the currently active window. FM 2026+",
+    "scope": "source.filemaker"
+  },
+  "Get(WindowUUID) [quick]": {
+    "prefix": "gwuuid",
+    "body": "Get ( WindowUUID )$0",
+    "description": "Get current window UUID. FM 2026+",
+    "scope": "source.filemaker"
+  },
   "Get(WindowVisible)": {
     "prefix": "Get ( WindowVisible )",
     "body": "Get ( WindowVisible )",
@@ -2421,6 +2511,12 @@
     "prefix": "GetNthRecord",
     "body": "GetNthRecord ( ${1:fieldName} ; ${2:recordNumber} )$0",
     "description": "GetNthRecord",
+    "scope": "source.filemaker"
+  },
+  "GetPersistentData": {
+    "prefix": "GetPersistentData",
+    "body": "GetPersistentData ( ${1:name} ; ${2:instanceID} )$0",
+    "description": "Returns the value of the specified persistent data entry by name and instance ID. FM 2026+",
     "scope": "source.filemaker"
   },
   "GetRAGSpaceInfo": {
@@ -2669,6 +2765,18 @@
     "description": "Insert from URL",
     "scope": "source.filemaker"
   },
+  "Insert Image Caption [ss]": {
+    "prefix": "ssimagecaption",
+    "body": "Insert Image Caption [\n\tModel: \"${1:modelName}\";\n\tSource: ${2:Table::ImageField};\n\tTarget: ${3:Table::CaptionField}\n]$0",
+    "description": "Sends an image to a captioning model and inserts the returned caption. FM 2026+",
+    "scope": "source.filemaker"
+  },
+  "Insert Image Captions in Found Set [ss]": {
+    "prefix": "ssimagecaptionfs",
+    "body": "Insert Image Captions in Found Set [\n\tModel: \"${1:modelName}\";\n\tSource Field: ${2:Table::ImageField};\n\tTarget Field: ${3:Table::CaptionField}\n]$0",
+    "description": "For every record in the found set, sends an image to a captioning model and inserts the caption. FM 2026+",
+    "scope": "source.filemaker"
+  },
   "Insert Picture [ss]": {
     "prefix": "ssinsertpic",
     "body": "Insert Picture [ ${1:Embed}; \"${2:filename}\" ]$0",
@@ -2912,6 +3020,12 @@
     "description": "List",
     "scope": "source.filemaker"
   },
+  "ListPersistentDataIDs": {
+    "prefix": "ListPersistentDataIDs",
+    "body": "ListPersistentDataIDs ( ${1:name} )$0",
+    "description": "Returns a list of instance IDs for entries with the specified name in the persistent data store. FM 2026+",
+    "scope": "source.filemaker"
+  },
   "Ln": {
     "prefix": "Ln",
     "body": "Ln ( ${1:number} )$0",
@@ -3090,6 +3204,12 @@
     "description": "Open File",
     "scope": "source.filemaker"
   },
+  "Open PDF [ss]": {
+    "prefix": "ssopenpdf",
+    "body": "Open PDF [ \"${1:filePath}\" ]$0",
+    "description": "Opens an existing PDF file. FM 2026+",
+    "scope": "source.filemaker"
+  },
   "Open Record/Request [ss]": {
     "prefix": "ssopenrec",
     "body": "Open Record/Request$0",
@@ -3124,6 +3244,12 @@
     "prefix": "sspause",
     "body": "Pause/Resume Script [ Duration (seconds): ${1:0} ]$0",
     "description": "Pause/Resume Script",
+    "scope": "source.filemaker"
+  },
+  "PDF workflow [block]": {
+    "prefix": "pdfworkflow",
+    "body": "Create PDF\nSave Records as PDF [ Append to open PDF ]\nAppend to PDF [ ${1:anotherSource} ]\nClose PDF [ \"${2:outputPath}\" ]$0",
+    "description": "Full PDF creation workflow: create, append, save. FM 2026+",
     "scope": "source.filemaker"
   },
   "Perform AppleScript [ss]": {
@@ -3198,6 +3324,18 @@
     "description": "Perform SQL Query by Natural Language. FM 2024+",
     "scope": "source.filemaker"
   },
+  "Persistent data read [block]": {
+    "prefix": "persistread",
+    "body": "Set Variable [ \\$${1:value}; Value: GetPersistentData ( \"${2:dataName}\" ; ${3:instanceID} ) ]$0",
+    "description": "Read a value from the persistent data store. FM 2026+",
+    "scope": "source.filemaker"
+  },
+  "Persistent data write [block]": {
+    "prefix": "persistwrite",
+    "body": "Configure Persistent Data [\n\tName: \"${1:dataName}\";\n\tInstance ID: ${2:instanceID};\n\tValue: ${3:value}\n]$0",
+    "description": "Write a value to the persistent data store. FM 2026+",
+    "scope": "source.filemaker"
+  },
   "Pi": {
     "prefix": "Pi",
     "body": "Pi",
@@ -3226,6 +3364,12 @@
     "prefix": "ssprint",
     "body": "Print [ With dialog: Off ]$0",
     "description": "Print",
+    "scope": "source.filemaker"
+  },
+  "Print PDF [ss]": {
+    "prefix": "ssprintpdf",
+    "body": "Print PDF [ ${1:containerField} ]$0",
+    "description": "Prints a PDF from the specified file path, container field, or variable. FM 2026+",
     "scope": "source.filemaker"
   },
   "Print Setup [ss]": {
